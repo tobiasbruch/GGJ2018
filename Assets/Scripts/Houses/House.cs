@@ -5,7 +5,9 @@ public class House : MonoBehaviour
 {
 	const float completeAtDistance = 1.3f;
 
-	public TaskToComplete task;
+	public int id => int.Parse(name.Substring(name.Length-1));
+
+	public TaskToComplete availableTask {get; private set;}
 
 	// Use this for initialization
 	void Start ()
@@ -19,10 +21,22 @@ public class House : MonoBehaviour
 		var player = Locator.Get<PlayerMovement>();
 
 		if(player == null) return;
-		if(task != null && Vector3.Distance(player.transform.position, transform.position) < completeAtDistance)
+		if(Vector3.Distance(player.transform.position, transform.position) < completeAtDistance)
 		{
-			Locator.Get<TaskManager>().CompletedTask(task);
-			this.task = null;
+			if(availableTask != null)
+			{
+				Locator.Get<TaskManager>().PickupTask(availableTask);
+				availableTask = null;
+			}
+			else
+			{
+				Locator.Get<TaskManager>().CanCompleteTask(this);
+			}
 		}
+	}
+
+	public void GiveTask(TaskToComplete task)
+	{
+		this.availableTask = task;
 	}
 }
