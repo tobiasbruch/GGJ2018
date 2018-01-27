@@ -16,8 +16,11 @@ public class TaskToComplete : MonoBehaviour
 
 	[SerializeField] float[] weights;
 
+	[SerializeField] float weightDivider = 10;
+
 
 	[SerializeField] ParticleSystem particleSystem;
+
 
 	[HideInInspector] public int targetId;
 
@@ -47,7 +50,7 @@ public class TaskToComplete : MonoBehaviour
 	{
 		pickedUp = true;
 		particleSystem.gameObject.SetActive(false);
-		Locator.Get<PlayerMomentumMovement>()._rigidbody.mass += weights[imageId]/10;
+		Locator.Get<PlayerMomentumMovement>()._rigidbody.mass += weights[imageId]/weightDivider;
 	}
 
 	public void Drop()
@@ -56,7 +59,7 @@ public class TaskToComplete : MonoBehaviour
 		var r = this.gameObject.AddComponent<Rigidbody2D>();
 		r.velocity = Locator.Get<PlayerMomentumMovement>()._rigidbody.velocity;
 		r.mass /=2;
-		Locator.Get<PlayerMomentumMovement>()._rigidbody.mass -= weights[imageId]/10;
+		Locator.Get<PlayerMomentumMovement>()._rigidbody.mass -= weights[imageId]/weightDivider;
 	}
 
 	void Update()
