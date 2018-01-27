@@ -12,8 +12,8 @@ public class ShootArrows : MonoBehaviour {
 	private float _shootingMaxFrequency;
 	[SerializeField]
 	private float _aimSpread;
-
-	public float modifier = 1;
+	[SerializeField]
+	private float _minDistance = 2f;
 
 	private Transform _target;
 	private Coroutine _shootingRoutine;
@@ -46,8 +46,10 @@ public class ShootArrows : MonoBehaviour {
 
 	IEnumerator RepeatShoot(){
 		while(true){
-			yield return new WaitForSeconds(Random.Range(_shootingMinFrequency / modifier, _shootingMaxFrequency / modifier));
-			Shoot();
+			yield return new WaitForSeconds(Random.Range(_shootingMinFrequency / Locator.Get<TaskManager>().hate, _shootingMaxFrequency / Locator.Get<TaskManager>().hate));
+
+			if(Vector3.Distance(Locator.Get<PlayerMovement>().transform.position, this.transform.position) > _minDistance)
+				Shoot();
 		}
 	}
 

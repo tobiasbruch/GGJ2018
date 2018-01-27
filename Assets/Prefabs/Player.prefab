@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 50430384651440948}
   - component: {fileID: 114854160160405508}
   - component: {fileID: 114598889418420392}
+  - component: {fileID: 114358141662590628}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -115,9 +116,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.55
+  m_LinearDrag: 1.2
   m_AngularDrag: 0.05
-  m_GravityScale: 0.35
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -146,8 +147,22 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.5, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &114358141662590628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670288312523560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3809a22a88c3b40876eb725ea23e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _force: 6
+  _turnRate: 180
+  _conversionRate: 0.2
 --- !u!114 &114598889418420392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,7 +180,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1670288312523560}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8004df3e0450d95469a607f0cd34059e, type: 3}
   m_Name: 
