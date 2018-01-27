@@ -162,6 +162,15 @@ Prefab:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1420499974}
+    - target: {fileID: 114956455477852878, guid: c94a4a10ad2767e44a6943f08f858c5f,
+        type: 2}
+      propertyPath: m_SoftZoneHeight
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550434574633482, guid: c94a4a10ad2767e44a6943f08f858c5f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -7.21
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c94a4a10ad2767e44a6943f08f858c5f, type: 2}
   m_IsPrefabParent: 0

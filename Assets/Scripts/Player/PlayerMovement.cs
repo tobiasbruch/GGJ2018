@@ -39,6 +39,8 @@ public class PlayerMovement : MonoBehaviour {
 			_rigidbody.velocity = new Vector2(_speed, _flapVelocity);
 		} else if(Input.GetKeyDown(KeyCode.W)){
 			_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _flapVelocityUp);
+		} else if(Input.GetKeyDown(KeyCode.S)){
+			_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, Mathf.Min(-1, _rigidbody.velocity.y));
 		}
 	}
 
