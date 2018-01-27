@@ -10,8 +10,28 @@ public class TaskToComplete : MonoBehaviour
 
 	[SerializeField] TextMeshPro label;
 
+	[SerializeField] GameObject root;
+	[SerializeField] SpriteRenderer spriteRenderer;
+	[SerializeField] Sprite[] allSprites;
+
+	[SerializeField] ParticleSystem particleSystem;
+
 	[HideInInspector] public int targetId;
 
+
+	void Start()
+	{
+		do
+		{
+			var rnd = Random.Range(0, allSprites.Length-1);
+			spriteRenderer.sprite = allSprites[rnd];
+		} while(spriteRenderer.sprite == null);
+
+		var c = spriteRenderer.bounds.center;
+		c.x += spriteRenderer.bounds.size.x / 4;
+		root.transform.position = c;
+
+	}
 	public void SetTarget(int targetId)
 	{
 		this.targetId = targetId;
@@ -22,6 +42,7 @@ public class TaskToComplete : MonoBehaviour
 	public void PickedUp()
 	{
 		pickedUp = true;
+		particleSystem.gameObject.SetActive(false);
 	}
 
 	public void Drop()
