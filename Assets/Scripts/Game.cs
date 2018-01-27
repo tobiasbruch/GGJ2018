@@ -17,12 +17,9 @@ public class Game : MonoBehaviour {
 		taskManager.StartRandomTask();
 	}
 
-	// Update is called once per frame
-	void Update () {
-
-	}
-
-	public void ShowGameOver(){
+	public void GameOver()
+	{
 		Instantiate(_gameOverScreen, _uiCanvas.transform, false);
+		Locator.Clear();
 	}
 }

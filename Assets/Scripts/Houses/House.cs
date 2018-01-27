@@ -16,7 +16,10 @@ public class House : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if(task != null && Vector3.Distance(Locator.Get<PlayerMovement>().transform.position, transform.position) < completeAtDistance)
+		var player = Locator.Get<PlayerMovement>();
+
+		if(player == null) return;
+		if(task != null && Vector3.Distance(player.transform.position, transform.position) < completeAtDistance)
 		{
 			Locator.Get<TaskManager>().CompletedTask(task);
 			this.task = null;

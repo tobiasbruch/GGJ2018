@@ -657,7 +657,7 @@ Prefab:
     - target: {fileID: 224003825597921542, guid: 7ed09c9f395db4e6285871d22e4865ef,
         type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224003825597921542, guid: 7ed09c9f395db4e6285871d22e4865ef,
         type: 2}
@@ -896,7 +896,7 @@ Prefab:
     - target: {fileID: 224802306706656354, guid: 6fc1a91a5a8ea45c8b3beddb0c152229,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224802306706656354, guid: 6fc1a91a5a8ea45c8b3beddb0c152229,
         type: 2}
@@ -958,6 +958,18 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114786833669392702, guid: 6fc1a91a5a8ea45c8b3beddb0c152229,
+        type: 2}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ac24c776f9ebb43699d2d24b8b3ff8d0,
+        type: 2}
+    - target: {fileID: 114786833669392702, guid: 6fc1a91a5a8ea45c8b3beddb0c152229,
+        type: 2}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 21241410165536988, guid: ac24c776f9ebb43699d2d24b8b3ff8d0,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fc1a91a5a8ea45c8b3beddb0c152229, type: 2}
   m_IsPrefabParent: 0
