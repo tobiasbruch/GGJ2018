@@ -14,7 +14,7 @@ public class PlayerMomentumMovement : MonoBehaviour {
 	private Vector2 _input;
 
 
-	private Rigidbody2D _rigidbody;
+	public Rigidbody2D _rigidbody;
 	// Use this for initialization
 	void Start () {
 		_rigidbody = GetComponent<Rigidbody2D>();
