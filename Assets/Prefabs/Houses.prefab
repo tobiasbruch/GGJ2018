@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4137024452884310}
   - component: {fileID: 114741818401712918}
+  - component: {fileID: 111821048451997922}
   m_Layer: 0
   m_Name: House6
   m_TagString: Untagged
@@ -86,6 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4980241150501060}
   - component: {fileID: 114710471638001650}
+  - component: {fileID: 111606011306502688}
   m_Layer: 0
   m_Name: House1
   m_TagString: Untagged
@@ -135,6 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4444450393855090}
   - component: {fileID: 114285208202351210}
+  - component: {fileID: 111213728454476920}
   m_Layer: 0
   m_Name: House3
   m_TagString: Untagged
@@ -200,6 +203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4828200393560070}
   - component: {fileID: 114920238029800052}
+  - component: {fileID: 111264075691291696}
   m_Layer: 0
   m_Name: House4
   m_TagString: Untagged
@@ -216,6 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4395883807327526}
   - component: {fileID: 114554683149024472}
+  - component: {fileID: 111585906677321928}
   m_Layer: 0
   m_Name: House2
   m_TagString: Untagged
@@ -570,6 +575,82 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.5}
   serializedVersion: 2
   m_Radius: 6.22
+--- !u!111 &111213728454476920
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1517328839844094}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 92a2308a93a8645c4b2ad46e566eb049, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 92a2308a93a8645c4b2ad46e566eb049, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!111 &111264075691291696
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634650951992884}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 92a2308a93a8645c4b2ad46e566eb049, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 92a2308a93a8645c4b2ad46e566eb049, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!111 &111585906677321928
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1645267136217142}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 92a2308a93a8645c4b2ad46e566eb049, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 92a2308a93a8645c4b2ad46e566eb049, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!111 &111606011306502688
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1257836536685276}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 92a2308a93a8645c4b2ad46e566eb049, type: 2}
+  m_Animations:
+  - {fileID: 0}
+  - {fileID: 7400000, guid: 92a2308a93a8645c4b2ad46e566eb049, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!111 &111821048451997922
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063545051431814}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 92a2308a93a8645c4b2ad46e566eb049, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 92a2308a93a8645c4b2ad46e566eb049, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114285208202351210
 MonoBehaviour:
   m_ObjectHideFlags: 1
