@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TaskToComplete : MonoBehaviour
 {
-	[SerializeField] float coinsReward;
-	[SerializeField] float love;
+	[SerializeField] public double coinsReward;
+	[SerializeField] public int love;
 
 	[SerializeField] TextMeshPro label;
 

@@ -19,6 +19,7 @@ public class Resources : MonoBehaviour
 	{
 		this.coins += coins;
 		label.text = this.coins.ToString();
+		transform.DOKill();
 		transform.DOPunchScale(Vector3.one * 1.4f, .5f, 1, .1f);
 	}
 }

@@ -45,7 +45,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1647561486602616
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 774ceeb1d60b74231be929863bf27e38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsReward: 0.05
+  coinsReward: 0.03
   love: 20
   label: {fileID: 114100771136854798}
   targetId: 0
