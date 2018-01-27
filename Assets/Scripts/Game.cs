@@ -14,7 +14,6 @@ public class Game : MonoBehaviour {
 	{
 		var taskManager = Locator.Get<TaskManager>();
 		taskManager.Init();
-		taskManager.StartRandomTask();
 	}
 
 	public void GameOver()

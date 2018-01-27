@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -18,5 +19,6 @@ public class Resources : MonoBehaviour
 	{
 		this.coins += coins;
 		label.text = this.coins.ToString();
+		transform.DOPunchScale(Vector3.one * 1.4f, .5f, 1, .1f);
 	}
 }

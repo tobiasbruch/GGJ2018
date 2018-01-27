@@ -21,7 +21,6 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		_rigidbody = GetComponent<Rigidbody2D>();
 		_rigidbody.velocity = new Vector2(_speed, _flapVelocity);
-
 	}
 
 	// Update is called once per frame

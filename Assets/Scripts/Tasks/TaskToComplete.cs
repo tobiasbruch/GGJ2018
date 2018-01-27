@@ -1,13 +1,19 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 
 
 public class TaskToComplete : MonoBehaviour
 {
-	public int id
+	[SerializeField] float coinsReward;
+	[SerializeField] float love;
+
+	[SerializeField] TextMeshPro label;
+
+	[HideInInspector] public int targetId;
+
+	public void SetTarget(int targetId)
 	{
-		get
-		{
-			return int.Parse(name.Substring(name.Length-1));
-		}
+		this.targetId = targetId;
+		label.text = targetId.ToString();
 	}
 }
