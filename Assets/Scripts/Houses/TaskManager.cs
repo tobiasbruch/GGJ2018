@@ -43,6 +43,6 @@ public class TaskManager : MonoBehaviour
 		task.gameObject.SetActive(false);
 		activeTasks.Remove(task);
 		StartRandomTask(task.id);
-		Locator.Get<Resources>().AddCoins(50);
+		Locator.Get<Resources>().AddCoins(0.05);
 	}
 }

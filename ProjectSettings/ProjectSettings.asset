@@ -633,7 +633,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: 70d3ceab-3411-4577-a75b-4edd4bbeed57
   projectName: GGJ2018A
   organizationId: tobias-bruch

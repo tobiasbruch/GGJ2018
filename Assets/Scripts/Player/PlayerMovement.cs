@@ -17,12 +17,13 @@ public class PlayerMovement : MonoBehaviour {
 	private Rigidbody2D _rigidbody;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		_rigidbody = GetComponent<Rigidbody2D>();
 		_rigidbody.velocity = new Vector2(_speed, _flapVelocity);
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		GetInput();
