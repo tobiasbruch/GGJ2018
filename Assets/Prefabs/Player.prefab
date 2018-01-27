@@ -188,8 +188,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3
   _flapVelocity: 1.5
-  _descentForce: 1
-  _flapVelocityUp: 3
+  _turnRate: 0
+  _rigidbody: {fileID: 50430384651440948}
 --- !u!212 &212184311263405832
 SpriteRenderer:
   m_ObjectHideFlags: 1
