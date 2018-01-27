@@ -24,6 +24,11 @@ public class PlayerMomentumMovement : MonoBehaviour {
 	void Update () {
 		GetInput();
 		ApplyRotation();
+
+		if(Input.GetKeyDown(KeyCode.Space))
+		{
+			Locator.Get<TaskManager>().Drop();
+		}
 	}
 
 	void FixedUpdate(){

@@ -18,7 +18,6 @@ public class FlipAnimation : MonoBehaviour {
 	}
 
 	void CheckForOrientation(){
-		Debug.Log(transform.eulerAngles);
 		if(transform.eulerAngles.z < 0 || transform.eulerAngles.z > 180){
 			_spriteRenderer.flipY = true;
 		} else {

@@ -19,16 +19,22 @@ public class House : MonoBehaviour
 		var player = Locator.Get<PlayerMovement>();
 
 		if(player == null) return;
+
+		var list = Locator.Get<TaskManager>().droppedTasks;
+		for (var i = list.Count - 1; i >= 0; i--)
+		{
+			var task = list[i];
+			if (task != null && !task.pickedUp && task.targetId == this.id &&
+			    Vector3.Distance(task.transform.position, transform.position) < completeAtDistance)
+				Locator.Get<TaskManager>().CompleteTask(task);
+		}
+
 		if(Vector3.Distance(player.transform.position, transform.position) < completeAtDistance)
 		{
-			if(availableTask != null)
+			if(availableTask != null && Locator.Get<TaskManager>().activeTask == null)
 			{
 				Locator.Get<TaskManager>().PickupTask(availableTask);
 				availableTask = null;
-			}
-			else
-			{
-				Locator.Get<TaskManager>().CanCompleteTask(this);
 			}
 		}
 	}

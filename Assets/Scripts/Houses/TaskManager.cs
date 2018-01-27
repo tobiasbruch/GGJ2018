@@ -22,6 +22,10 @@ public class TaskManager : MonoBehaviour
 
 	public List<TaskToComplete> activeTasks;
 
+	public List<TaskToComplete> droppedTasks;
+
+	public TaskToComplete activeTask => activeTasks.Count > 0 ? activeTasks[0] : null;
+
 	public void Init()
 	{
 		foreach (var taskToComplete in tasks)
@@ -85,26 +89,45 @@ public class TaskManager : MonoBehaviour
 
 		//if(last != null)
 		//	pos.y = last.transform.position.y - 20;
-		task.transform.SetParent(taskListContainer.transform);
+		//task.transform.SetParent(taskListContainer.transform);
 
-		task.transform.DOLocalMove(pos, .5f).SetEase(Ease.InOutSine);
+		//task.transform.DOLocalMove(pos, .5f).SetEase(Ease.InOutSine);
+		var p = Locator.Get<PlayerMovement>();
+		p.ConnectItem(task.GetComponent<Joint2D>());
+		task.transform.position = p.transform.position;
+		task.transform.localScale *= .6f;
+		task.PickedUp();
+
+	}
+
+	public void Drop()
+	{
+		if(activeTask != null)
+		{
+			droppedTasks.Add(activeTask);
+			activeTask.Drop();
+			activeTasks.Remove(activeTask);
+		}
 	}
 
 	void Update()
 	{
-
+		for (var i = droppedTasks.Count - 1; i >= 0; i--)
+		{
+			var taskToComplete = droppedTasks[i];
+			if (taskToComplete != null && taskToComplete.transform.position.y < -10)
+			{
+				Destroy(taskToComplete);
+				droppedTasks.RemoveAt(i);
+			}
+		}
 	}
 
-	public void CanCompleteTask(House house)
+	public void CompleteTask(TaskToComplete task)
 	{
-		var task = activeTasks.Find(t => t.targetId == house.id);
-		if(task != null)
-		{
-			Destroy(task.gameObject);
-			hate += hateIncrement;
-			activeTasks.Remove(task);
-			Locator.Get<Resources>().AddCoins(task.coinsReward);
-		}
-
+		hate += hateIncrement;
+		Locator.Get<Resources>().AddCoins(task.coinsReward);
+		droppedTasks.Remove(task);
+		Destroy(task.gameObject);
 	}
 }
