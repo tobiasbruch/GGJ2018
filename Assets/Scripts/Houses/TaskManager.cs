@@ -6,8 +6,16 @@ using UnityEngine;
 
 public class TaskManager : MonoBehaviour
 {
+	[System.Serializable]
+	public class RequestSpeechBubbles{
+		public int _id;
+		public Sprite[] _speechBubbles;
+	}
 	public float hate;
 
+	[SerializeField] GameObject _requestSpeechBubblePrefab;
+	[SerializeField] RequestSpeechBubbles[] _requestSpeechBubbles;
+	[SerializeField] private float[] _hateThresholds;
 	[SerializeField] float taskFrequencySecondsMin = 10;
 	[SerializeField] float taskFrequencySecondsMax = 15;
 	[SerializeField] float maskTasks = 2;
@@ -73,6 +81,26 @@ public class TaskManager : MonoBehaviour
 
 		task.transform.position = houseGivenTask.transform.position + new Vector3(1,1, 0);
 		houseGivenTask.GiveTask(task);
+
+		//Create Speechbubble
+		int hateLevel = 0;
+		for(int i = 0; i < _hateThresholds.Length; i++){
+			if(_hateThresholds[i] > hate){
+				hateLevel = i;
+				break;
+			}
+		}
+		RequestSpeechBubbles speechbubbles = null;
+		foreach(RequestSpeechBubbles item in _requestSpeechBubbles){
+			if(item._id == toOtherHouse.id){
+				speechbubbles = item;
+				break;
+			}
+		}
+		if(speechbubbles != null){
+		Instantiate(_requestSpeechBubblePrefab, houseGivenTask.transform.position + new Vector3(0, 1, 0), Quaternion.identity).
+			GetComponentInChildren<SpriteRenderer>().sprite = speechbubbles._speechBubbles[Mathf.Min(hateLevel, speechbubbles._speechBubbles.Length)];
+		}
 	}
 
 	public void PickupTask(TaskToComplete task)
