@@ -48,11 +48,10 @@ public class TaskManager : MonoBehaviour
 		var player = Locator.Get<PlayerMovement>();
 
 		if(player == null) return;
-		var allowedHouses = houses.Where(x => x.id != exclude &&
+		var allowedHouses = houses.Where(x => x.availableTask == null && x.id != exclude &&
 		      Vector3.Distance(x.transform.position, player.transform.position) > dontCreateTaskAtDistanceToHouse).ToList();
 
 		var houseGivenTask = houses[Random.Range(0, allowedHouses.Count)];
-
 
 		var otherHouses = houses.Where(t => t != houseGivenTask).ToList();
 		var toOtherHouse = otherHouses[Random.Range(0, otherHouses.Count)];
@@ -71,7 +70,7 @@ public class TaskManager : MonoBehaviour
 	public void PickupTask(TaskToComplete task)
 	{
 		activeTasks.Add(task);
-		var pos = Camera.main.ViewportToWorldPoint(new Vector3(.05f, 1 - (.05f + activeTasks.Count * .05f), 0));
+		var pos = Camera.main.ViewportToWorldPoint(new Vector3(.05f, 1 - (.02f + activeTasks.Count * .08f), 0));
 		pos.z = 0;
 		task.transform.DOMove(pos, .5f).SetEase(Ease.InOutSine);
 	}
@@ -82,8 +81,9 @@ public class TaskManager : MonoBehaviour
 		if(task != null)
 		{
 			Destroy(task.gameObject);
+			house.AddLove(task.love);
 			activeTasks.Remove(task);
-			Locator.Get<Resources>().AddCoins(0.05	);
+			Locator.Get<Resources>().AddCoins(task.coinsReward);
 		}
 
 	}

@@ -13,6 +13,8 @@ public class ShootArrows : MonoBehaviour {
 	[SerializeField]
 	private float _aimSpread;
 
+	public float modifier = 1;
+
 	private Transform _target;
 	private Coroutine _shootingRoutine;
 
@@ -44,7 +46,7 @@ public class ShootArrows : MonoBehaviour {
 
 	IEnumerator RepeatShoot(){
 		while(true){
-			yield return new WaitForSeconds(Random.Range(_shootingMinFrequency, _shootingMaxFrequency));
+			yield return new WaitForSeconds(Random.Range(_shootingMinFrequency / modifier, _shootingMaxFrequency / modifier));
 			Shoot();
 		}
 	}
