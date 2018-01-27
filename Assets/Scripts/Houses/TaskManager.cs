@@ -6,10 +6,14 @@ using UnityEngine;
 
 public class TaskManager : MonoBehaviour
 {
+	public float hate;
+
 	[SerializeField] float taskFrequencySecondsMin = 10;
 	[SerializeField] float taskFrequencySecondsMax = 15;
 	[SerializeField] float maskTasks = 2;
 	[SerializeField] float dontCreateTaskAtDistanceToHouse = 1.5f;
+	[SerializeField] float hateIncrement = .3f;
+
 	[SerializeField] GameObject taskListContainer;
 
 	public List<House> houses;
@@ -97,7 +101,7 @@ public class TaskManager : MonoBehaviour
 		if(task != null)
 		{
 			Destroy(task.gameObject);
-			house.AddLove(task.love);
+			hate += hateIncrement;
 			activeTasks.Remove(task);
 			Locator.Get<Resources>().AddCoins(task.coinsReward);
 		}

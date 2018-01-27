@@ -600,7 +600,7 @@ MonoBehaviour:
   _shootingMinFrequency: 1
   _shootingMaxFrequency: 2
   _aimSpread: 1
-  modifier: 1
+  _minDistance: 2
 --- !u!114 &114330719589683508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -612,10 +612,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c253452641a50454a9b33eb4f794c615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hate: 0
   taskFrequencySecondsMin: 5
   taskFrequencySecondsMax: 8
   maskTasks: 2
-  dontCreateTaskAtDistanceToHouse: 1.5
+  dontCreateTaskAtDistanceToHouse: 2
+  hateIncrement: 0.3
   taskListContainer: {fileID: 0}
   houses:
   - {fileID: 114480999684080214}
@@ -655,7 +657,7 @@ MonoBehaviour:
   _shootingMinFrequency: 1
   _shootingMaxFrequency: 2
   _aimSpread: 1
-  modifier: 1
+  _minDistance: 2
 --- !u!114 &114554683149024472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -685,7 +687,7 @@ MonoBehaviour:
   _shootingMinFrequency: 1
   _shootingMaxFrequency: 2
   _aimSpread: 1
-  modifier: 1
+  _minDistance: 2
 --- !u!114 &114710471638001650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -728,7 +730,7 @@ MonoBehaviour:
   _shootingMinFrequency: 1
   _shootingMaxFrequency: 2
   _aimSpread: 1
-  modifier: 1
+  _minDistance: 2
 --- !u!212 &212100489758546510
 SpriteRenderer:
   m_ObjectHideFlags: 1
