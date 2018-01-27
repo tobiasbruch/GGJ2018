@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class House : MonoBehaviour
 {
-	const float completeAtDistance = .5f;
+	const float completeAtDistance = 1.3f;
 
 	public TaskToComplete task;
 

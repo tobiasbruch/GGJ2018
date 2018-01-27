@@ -7,7 +7,7 @@ public class TaskToComplete : MonoBehaviour
 	{
 		get
 		{
-			return this.name[this.name.Length-1];
+			return int.Parse(name.Substring(name.Length-1));
 		}
 	}
 }
