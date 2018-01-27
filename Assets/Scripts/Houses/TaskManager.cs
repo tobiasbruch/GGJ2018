@@ -37,6 +37,7 @@ public class TaskManager : MonoBehaviour
 
 	IEnumerator CreateTasks()
 	{
+		yield return new WaitForSeconds(2);
 		while(true)
 		{
 			if(houses.FindAll(t => t.availableTask != null).Count <= maskTasks )
