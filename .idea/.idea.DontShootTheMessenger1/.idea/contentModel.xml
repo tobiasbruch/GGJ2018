@@ -89,8 +89,10 @@
           </e>
           <e p="Player" t="Include">
             <e p="ArrowCollision.cs" t="Include" />
+            <e p="FlipAnimation.cs" t="Include" />
             <e p="PlayerMomentumMovement.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
+            <e p="PlayerSound.cs" t="Include" />
             <e p="Resources.cs" t="Include" />
           </e>
           <e p="Tasks" t="Include">
@@ -98,6 +100,8 @@
           </e>
           <e p="UI" t="Include">
             <e p="GameOverScreen.cs" t="Include" />
+            <e p="Intro.cs" t="Include" />
+            <e p="RequestSpeechBubble.cs" t="Include" />
           </e>
           <e p="Utils" t="Include">
             <e p="Locator.cs" t="Include" />

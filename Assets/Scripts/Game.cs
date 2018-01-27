@@ -9,13 +9,13 @@ public class Game : MonoBehaviour {
 	[SerializeField]
 	private Canvas _uiCanvas;
 
-	// Use this for initialization
-	void Start ()
-	{
-		var taskManager = Locator.Get<TaskManager>();
-		taskManager.Init();
-	}
+	[SerializeField]
+	private GameObject intro;
 
+	void Start()
+	{
+		intro.gameObject.SetActive(true);
+	}
 	public void GameOver()
 	{
 		Instantiate(_gameOverScreen, _uiCanvas.transform, false);

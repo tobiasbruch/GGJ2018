@@ -27,15 +27,15 @@ public class TaskToComplete : MonoBehaviour
 			spriteRenderer.sprite = allSprites[rnd];
 		} while(spriteRenderer.sprite == null);
 
-		var c = spriteRenderer.bounds.center;
-		c.x += spriteRenderer.bounds.size.x / 4;
-		root.transform.position = c;
+		//var c = spriteRenderer.bounds.center;
+		//c.x += spriteRenderer.bounds.size.x / 4;
+		//root.transform.position = c;
 
 	}
 	public void SetTarget(int targetId)
 	{
 		this.targetId = targetId;
-		label.text = targetId.ToString();
+		//label.text = targetId.ToString();
 	}
 
 	public bool pickedUp = false;
@@ -65,7 +65,7 @@ public class TaskToComplete : MonoBehaviour
 				vel.Normalize();
 				vel /= 2;
 				toPos -= vel;
-				transform.position = Vector3.MoveTowards(transform.position, toPos, 2.8f * Time.deltaTime);
+				transform.position = Vector3.MoveTowards(transform.position, toPos, 3.2f * Time.deltaTime);
 			}
 		}
 	}
