@@ -19,7 +19,8 @@ public class PlayerMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_rigidbody = GetComponent<Rigidbody2D>();
-		_xVelocity = _speed;
+		_rigidbody.velocity = new Vector2(_speed, _flapVelocity);
+
 	}
 	
 	// Update is called once per frame
