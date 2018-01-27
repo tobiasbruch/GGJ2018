@@ -34,12 +34,12 @@ public class ShootArrows : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	IEnumerator RepeatShoot(){
@@ -50,7 +50,6 @@ public class ShootArrows : MonoBehaviour {
 	}
 
 	void Shoot(){
-		Debug.Log(_target);
 		if(_target){
 			GameObject instance = Instantiate(_arrowPrefab, transform.position, Quaternion.LookRotation(_target.position - transform.position, Vector3.forward));
 			instance.transform.LookAt(_target.position + new Vector3(0, Random.Range(0f, 1f) * (_target.position - transform.position).magnitude * _aimSpread, 0));
