@@ -82,7 +82,10 @@ public class TaskManager : MonoBehaviour
 
 		task.transform.position = houseGivenTask.transform.position + new Vector3(1,1, 0);
 		houseGivenTask.GiveTask(task);
+	}
 
+	public void PickupTask(TaskToComplete task)
+	{
 		//Create Speechbubble
 		int hateLevel = 0;
 		for(int i = 0; i < _hateThresholds.Length; i++){
@@ -93,19 +96,16 @@ public class TaskManager : MonoBehaviour
 		}
 		RequestSpeechBubbles speechbubbles = null;
 		foreach(RequestSpeechBubbles item in _requestSpeechBubbles){
-			if(item._id == toOtherHouse.id){
+			if(item._id == task.targetId){
 				speechbubbles = item;
 				break;
 			}
 		}
 		if(speechbubbles != null){
-		Instantiate(_requestSpeechBubblePrefab, houseGivenTask.transform.position + new Vector3(0, 1, 0), Quaternion.identity).
+		Instantiate(_requestSpeechBubblePrefab, task.transform.position - new Vector3(1, 0, 0), Quaternion.identity).
 			GetComponentInChildren<SpriteRenderer>().sprite = speechbubbles._speechBubbles[Mathf.Min(hateLevel, speechbubbles._speechBubbles.Length)];
 		}
-	}
-
-	public void PickupTask(TaskToComplete task)
-	{
+		
 		activeTasks.Add(task);
 
 		var last = activeTasks.LastOrDefault();
@@ -127,6 +127,7 @@ public class TaskManager : MonoBehaviour
 		task.transform.localScale *= .6f;
 		task.PickedUp();
 
+		
 	}
 
 	public void Drop()
