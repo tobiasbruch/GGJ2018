@@ -77,7 +77,7 @@ public class TaskManager : MonoBehaviour
 
 		if(taskListContainer.transform.childCount > 0)
 			pos.y = taskListContainer.transform.GetChild(taskListContainer.transform.childCount-1)
-				        .transform.position.y -.7f;
+				        .transform.localPosition.y -.7f;
 
 		//if(last != null)
 		//	pos.y = last.transform.position.y - 20;
