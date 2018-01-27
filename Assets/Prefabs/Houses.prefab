@@ -595,6 +595,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hate: 0
+  _requestSpeechBubblePrefab: {fileID: 1214298334329356, guid: 75f8e3055c7b184469f8860e80768f95,
+    type: 2}
+  _requestSpeechBubbles:
+  - _id: 1
+    _speechBubbles:
+    - {fileID: 21300000, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300010, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300020, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300032, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+  - _id: 2
+    _speechBubbles:
+    - {fileID: 21300002, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300012, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300024, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300034, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+  - _id: 3
+    _speechBubbles:
+    - {fileID: 21300004, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300014, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300022, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300038, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+  - _id: 4
+    _speechBubbles:
+    - {fileID: 21300026, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300016, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300028, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300036, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+  - _id: 5
+    _speechBubbles:
+    - {fileID: 21300006, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300018, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300030, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+    - {fileID: 21300030, guid: ce96187c43faa9149a2e79f7215d59ba, type: 3}
+  _hateThresholds:
+  - 0
+  - 1
+  - 2
+  - 3
   taskFrequencySecondsMin: 5
   taskFrequencySecondsMax: 8
   maskTasks: 2
