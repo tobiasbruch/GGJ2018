@@ -83,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1725368162256012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.995194, y: 2.068714, z: 0}
+  m_LocalPosition: {x: -11.908156, y: 4.8815255, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4662695017380328}
@@ -194,6 +194,28 @@ MonoBehaviour:
   - {fileID: 21300036, guid: efe9e43ebdb2a415c91ebda5f6cf423f, type: 3}
   - {fileID: 21300038, guid: efe9e43ebdb2a415c91ebda5f6cf423f, type: 3}
   - {fileID: 21300040, guid: efe9e43ebdb2a415c91ebda5f6cf423f, type: 3}
+  weights:
+  - 3
+  - 3
+  - 1.5
+  - 3
+  - 1
+  - 0.3
+  - 3
+  - 3
+  - 1
+  - 1.5
+  - 0.3
+  - 2
+  - 0.3
+  - 2
+  - 1
+  - 1.5
+  - 0
+  - 1
+  - 2
+  - 0.5
+  - 1.5
   particleSystem: {fileID: 198641511096391822}
   targetId: 0
   pickedUp: 0
