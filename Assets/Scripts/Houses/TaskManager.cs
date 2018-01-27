@@ -10,6 +10,7 @@ public class TaskManager : MonoBehaviour
 	[SerializeField] float taskFrequencySecondsMax = 15;
 	[SerializeField] float maskTasks = 2;
 	[SerializeField] float dontCreateTaskAtDistanceToHouse = 1.5f;
+	[SerializeField] GameObject taskListContainer;
 
 	public List<House> houses;
 
@@ -38,7 +39,6 @@ public class TaskManager : MonoBehaviour
 			else
 			{
 				yield return new WaitForSeconds(Random.Range(2,5));
-
 			}
 		}
 	}
@@ -51,7 +51,7 @@ public class TaskManager : MonoBehaviour
 		var allowedHouses = houses.Where(x => x.availableTask == null && x.id != exclude &&
 		      Vector3.Distance(x.transform.position, player.transform.position) > dontCreateTaskAtDistanceToHouse).ToList();
 
-		var houseGivenTask = houses[Random.Range(0, allowedHouses.Count)];
+		var houseGivenTask = allowedHouses[Random.Range(0, allowedHouses.Count)];
 
 		var otherHouses = houses.Where(t => t != houseGivenTask).ToList();
 		var toOtherHouse = otherHouses[Random.Range(0, otherHouses.Count)];
@@ -70,9 +70,22 @@ public class TaskManager : MonoBehaviour
 	public void PickupTask(TaskToComplete task)
 	{
 		activeTasks.Add(task);
+
+		var last = activeTasks.LastOrDefault();
+
 		var pos = Camera.main.ViewportToWorldPoint(new Vector3(.05f, 1 - (.02f + activeTasks.Count * .08f), 0));
 		pos.z = 0;
+
+		//if(last != null)
+		//	pos.y = last.transform.position.y - 20;
+		task.transform.SetParent(taskListContainer.transform);
+
 		task.transform.DOMove(pos, .5f).SetEase(Ease.InOutSine);
+	}
+
+	void Update()
+	{
+
 	}
 
 	public void CanCompleteTask(House house)

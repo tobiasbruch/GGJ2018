@@ -485,7 +485,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1177112144729136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4348767062372266}
@@ -599,8 +599,8 @@ MonoBehaviour:
     type: 2}
   _shootingMinFrequency: 1
   _shootingMaxFrequency: 2
-  _aimSpread: 0.35
-  modifier: 0
+  _aimSpread: 1
+  modifier: 1
 --- !u!114 &114330719589683508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -616,6 +616,7 @@ MonoBehaviour:
   taskFrequencySecondsMax: 8
   maskTasks: 2
   dontCreateTaskAtDistanceToHouse: 1.5
+  container: {fileID: 0}
   houses:
   - {fileID: 114480999684080214}
   - {fileID: 114710471638001650}
@@ -653,8 +654,8 @@ MonoBehaviour:
     type: 2}
   _shootingMinFrequency: 1
   _shootingMaxFrequency: 2
-  _aimSpread: 0.35
-  modifier: 0
+  _aimSpread: 1
+  modifier: 1
 --- !u!114 &114554683149024472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -683,8 +684,8 @@ MonoBehaviour:
     type: 2}
   _shootingMinFrequency: 1
   _shootingMaxFrequency: 2
-  _aimSpread: 0.35
-  modifier: 0
+  _aimSpread: 1
+  modifier: 1
 --- !u!114 &114710471638001650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -726,8 +727,8 @@ MonoBehaviour:
     type: 2}
   _shootingMinFrequency: 1
   _shootingMaxFrequency: 2
-  _aimSpread: 0.35
-  modifier: 0
+  _aimSpread: 1
+  modifier: 1
 --- !u!212 &212100489758546510
 SpriteRenderer:
   m_ObjectHideFlags: 1
