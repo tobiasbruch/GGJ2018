@@ -115,7 +115,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.55
   m_AngularDrag: 0.05
   m_GravityScale: 0.35
   m_Material: {fileID: 0}
@@ -172,7 +172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3
   _flapVelocity: 1.5
-  _turnRate: 100000000
+  _descentForce: 1
+  _flapVelocityUp: 3
 --- !u!212 &212227155988777036
 SpriteRenderer:
   m_ObjectHideFlags: 1

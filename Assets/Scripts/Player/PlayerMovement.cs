@@ -9,10 +9,9 @@ public class PlayerMovement : MonoBehaviour {
 	[SerializeField]
 	private float _flapVelocity;
 	[SerializeField]
-	private float _turnRate;
-
-	private float _xInput;
-	private float _xVelocity;
+	private float _descentForce;
+	[SerializeField]
+	private float _flapVelocityUp;
 
 	private Rigidbody2D _rigidbody;
 
@@ -34,26 +33,18 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void GetInput(){
-		float newXInput =  Input.GetAxis("Horizontal");
-		if(newXInput != _xInput && newXInput != 0){
-			_xInput = newXInput;
-			float xVel = 0;
-			if(_xInput > 0){
-				xVel = _speed;
-			} else if(_xInput < 0){
-				xVel = -_speed;
-			}
-			_rigidbody.velocity = new Vector2(xVel, _flapVelocity);
+		if(Input.GetKeyDown(KeyCode.A)){
+			_rigidbody.velocity = new Vector2(-_speed, _flapVelocity);
+		} else if(Input.GetKeyDown(KeyCode.D)){
+			_rigidbody.velocity = new Vector2(_speed, _flapVelocity);
+		} else if(Input.GetKeyDown(KeyCode.W)){
+			_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _flapVelocityUp);
 		}
-		/*
-		_xInput = Input.GetAxis("Horizontal");
-
-		if(!Mathf.Approximately(_xInput, 0)){
-			_xVelocity = Mathf.MoveTowards(_xVelocity, Mathf.Sign(_xInput) * _speed, Time.deltaTime * _turnRate);
-		}*/
 	}
 
 	void ProcessInput(){
-		//_rigidbody.velocity = new Vector2(_xVelocity, Input.GetKeyDown(KeyCode.Space) ? _flapVelocity : _rigidbody.velocity.y);
+		if(Input.GetKey(KeyCode.S)){
+			_rigidbody.AddForce(Vector2.down * Time.fixedDeltaTime * _descentForce);
+		}
 	}
 }
