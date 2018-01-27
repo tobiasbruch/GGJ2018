@@ -172,6 +172,58 @@ Prefab:
       propertyPath: tasks.Array.data[3]
       value: 
       objectReference: {fileID: 647681193}
+    - target: {fileID: 4955833193506282, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466734538671300, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831390334022022, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587125671825564, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846935973813968, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380659273222066, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424504619787992, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251263520800750, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212967095538513726, guid: 6efc68359c91c48a9b48f6763bc0dee2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 212459701793458376, guid: 6efc68359c91c48a9b48f6763bc0dee2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 212100489758546510, guid: 6efc68359c91c48a9b48f6763bc0dee2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 212842532895607966, guid: 6efc68359c91c48a9b48f6763bc0dee2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
   m_IsPrefabParent: 0
@@ -323,6 +375,60 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1598723721}
   m_Script: {fileID: 11500000, guid: 774ceeb1d60b74231be929863bf27e38, type: 3}
+--- !u!1 &1116954794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1116954796}
+  - component: {fileID: 1116954795}
+  m_Layer: 0
+  m_Name: FloorCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1116954795
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1116954794}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -1.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 200, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1116954796
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1116954794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1388262561
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +752,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950dcbe1fce5c4fbf852476d876fe741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameOverScreen: {fileID: 1409261280279792, guid: 3ce43c9858e36cc41966d2461bb0f93b,
+    type: 2}
+  _uiCanvas: {fileID: 1859321596}
 --- !u!1 &1859321593
 GameObject:
   m_ObjectHideFlags: 0
