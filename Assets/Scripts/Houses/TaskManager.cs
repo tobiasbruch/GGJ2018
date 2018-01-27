@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class TaskManager : MonoBehaviour
@@ -25,12 +26,15 @@ public class TaskManager : MonoBehaviour
 		{
 			randomId = Random.Range(0, houses.Count);
 		} while(randomId == exclude);
-Debug.Log("id: " + randomId + " exc: " + exclude);
+
 		var task = tasks[randomId];
 		tasks[randomId].gameObject.SetActive(true);
 
 		activeTasks.Add(task);
 
+		task.transform.localScale = Vector3.one;
+
+		task.transform.DOPunchScale(Vector3.one * 2, .5f, 1, .1f);
 		houses[randomId].task = task;
 	}
 
@@ -39,5 +43,6 @@ Debug.Log("id: " + randomId + " exc: " + exclude);
 		task.gameObject.SetActive(false);
 		activeTasks.Remove(task);
 		StartRandomTask(task.id);
+		Locator.Get<Resources>().AddCoins(50);
 	}
 }

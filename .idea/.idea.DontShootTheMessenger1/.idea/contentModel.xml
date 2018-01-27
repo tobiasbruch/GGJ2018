@@ -6,13 +6,21 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="Castle" t="Include">
+            <e p="Arrows" t="Include">
+              <e p="Arrow.cs" t="Include" />
+              <e p="ShootArrows.cs" t="Include" />
+            </e>
+          </e>
           <e p="Game.cs" t="Include" />
           <e p="Houses" t="Include">
             <e p="House.cs" t="Include" />
             <e p="TaskManager.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
+            <e p="ArrowCollision.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
+            <e p="Resources.cs" t="Include" />
           </e>
           <e p="Tasks" t="Include">
             <e p="TaskToComplete.cs" t="Include" />
