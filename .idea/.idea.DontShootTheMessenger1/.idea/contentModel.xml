@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2017.2/resharper-host/local/Transient/ReSharperHost/v10/SolutionCaches/_DontShootTheMessenger1.-1820587376.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Game.cs" t="Include" />
+          <e p="Houses" t="Include">
+            <e p="House.cs" t="Include" />
+            <e p="TaskManager.cs" t="Include" />
+          </e>
+          <e p="Player" t="Include">
+            <e p="PlayerMovement.cs" t="Include" />
+          </e>
+          <e p="Tasks" t="Include">
+            <e p="TaskToComplete.cs" t="Include" />
+          </e>
+          <e p="Utils" t="Include">
+            <e p="Locator.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="DontShootTheMessenger1.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
