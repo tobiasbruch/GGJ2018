@@ -139,7 +139,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2, y: 0}
+  m_Offset: {x: 0.2, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -150,7 +150,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 1}
+  m_Size: {x: 0.23, y: 0.58}
   m_EdgeRadius: 0
 --- !u!82 &82845563537215490
 AudioSource:
@@ -299,8 +299,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wingFlapping:
-  - {fileID: 8300000, guid: 9053df6ef5a005c47aeedc1af7bcb950, type: 3}
-  - {fileID: 8300000, guid: 5088ee2fe49f47842a6f199ac454d834, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   _wingFlappingAudioSource: {fileID: 82845563537215490}
 --- !u!114 &114854160160405508
 MonoBehaviour:

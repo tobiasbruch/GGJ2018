@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 public class House : MonoBehaviour
@@ -20,16 +21,7 @@ public class House : MonoBehaviour
 
 		if(player == null) return;
 
-		var list = Locator.Get<TaskManager>().droppedTasks;
-		for (var i = list.Count - 1; i >= 0; i--)
-		{
-			var task = list[i];
-			if (task != null && !task.pickedUp && task.targetId == this.id &&
-			    Vector3.Distance(task.transform.position, transform.position) < completeAtDistance)
-				Locator.Get<TaskManager>().CompleteTask(task);
-		}
-
-		if(Vector3.Distance(player.transform.position, transform.position) < completeAtDistance)
+		if(availableTask != null && Vector3.Distance(player.transform.position, availableTask.transform.position) < completeAtDistance)
 		{
 			if(availableTask != null && Locator.Get<TaskManager>().activeTask == null)
 			{
@@ -38,6 +30,17 @@ public class House : MonoBehaviour
 			}
 		}
 	}
+
+	void OnTriggerEnter2D(Collider2D collider)
+	{
+		var task = collider.GetComponent<TaskToComplete>();
+		if(task != null && task.targetId == this.id)
+		{
+			Locator.Get<TaskManager>().CompleteTask(task);
+			GetComponent<Animation>().Play("HouseBounce");
+		}
+	}
+
 
 	public void GiveTask(TaskToComplete task)
 	{
