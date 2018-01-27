@@ -172,6 +172,58 @@ Prefab:
       propertyPath: tasks.Array.data[3]
       value: 
       objectReference: {fileID: 647681193}
+    - target: {fileID: 4955833193506282, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466734538671300, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831390334022022, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587125671825564, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846935973813968, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380659273222066, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424504619787992, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251263520800750, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212967095538513726, guid: 6efc68359c91c48a9b48f6763bc0dee2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 212459701793458376, guid: 6efc68359c91c48a9b48f6763bc0dee2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 212100489758546510, guid: 6efc68359c91c48a9b48f6763bc0dee2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 212842532895607966, guid: 6efc68359c91c48a9b48f6763bc0dee2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6efc68359c91c48a9b48f6763bc0dee2, type: 2}
   m_IsPrefabParent: 0
