@@ -27,6 +27,7 @@ public class ShootArrows : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collider){
 		if(collider.GetComponent<PlayerMovement>()){
 			_isInRange = true;
+			StartCoroutine(RepeatShoot());
 		}
 	}
 
@@ -38,7 +39,6 @@ public class ShootArrows : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_target = Locator.Get<PlayerMomentumMovement>().transform;
-		StartCoroutine(RepeatShoot());
 	}
 
 	// Update is called once per frame
@@ -47,20 +47,18 @@ public class ShootArrows : MonoBehaviour {
 	}
 
 	IEnumerator RepeatShoot(){
-		while(true){
-			if(_isInRange && Vector3.Distance(Locator.Get<PlayerMovement>().transform.position, this.transform.position) > _minDistance)
-			{
-				float totalWaitTime = (Random.Range(_shootingMinFrequency / Locator.Get<TaskManager>().hate, _shootingMaxFrequency / Locator.Get<TaskManager>().hate));
-				yield return new WaitForSeconds(totalWaitTime -_windUpDuration * _shotAnimationPoint);
-				WindupShot shot = Instantiate(_windUpPrefab,transform, false).GetComponent<WindupShot>();
-				shot._target = _target;
-				shot.KillIn(_windUpDuration);
-				yield return new WaitForSeconds(_windUpDuration * _shotAnimationPoint);
+		while(_isInRange && Vector3.Distance(Locator.Get<PlayerMovement>().transform.position, this.transform.position) > _minDistance){
+			float totalWaitTime = (Random.Range(_shootingMinFrequency / Locator.Get<TaskManager>().hate, _shootingMaxFrequency / Locator.Get<TaskManager>().hate));
+			yield return new WaitForSeconds(totalWaitTime -_windUpDuration * _shotAnimationPoint);
+			WindupShot shot = Instantiate(_windUpPrefab,transform, false).GetComponent<WindupShot>();
+			shot._target = _target;
+			shot.KillIn(_windUpDuration);
+			yield return new WaitForSeconds(_windUpDuration * _shotAnimationPoint);
 
-				Shoot();
-			}
+			Shoot();
 		}
 	}
+	
 
 	void Shoot(){
 		if(_target){

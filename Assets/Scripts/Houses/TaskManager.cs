@@ -40,12 +40,12 @@ public class TaskManager : MonoBehaviour
 		{
 			taskToComplete.gameObject.SetActive(false);
 		}
+
 		StartCoroutine(CreateTasks());
 	}
 
 	IEnumerator CreateTasks()
 	{
-		yield return new WaitForSeconds(2);
 		while(true)
 		{
 			if(houses.FindAll(t => t.availableTask != null).Count <= maskTasks )
@@ -105,7 +105,7 @@ public class TaskManager : MonoBehaviour
 		Instantiate(_requestSpeechBubblePrefab, task.transform.position - new Vector3(1, 0, 0), Quaternion.identity).
 			GetComponentInChildren<SpriteRenderer>().sprite = speechbubbles._speechBubbles[Mathf.Min(hateLevel, speechbubbles._speechBubbles.Length)];
 		}
-		
+
 		activeTasks.Add(task);
 
 		var last = activeTasks.LastOrDefault();
@@ -127,7 +127,7 @@ public class TaskManager : MonoBehaviour
 		task.transform.localScale *= .6f;
 		task.PickedUp();
 
-		
+
 	}
 
 	public void Drop()

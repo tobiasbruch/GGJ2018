@@ -14,28 +14,35 @@ public class TaskToComplete : MonoBehaviour
 	[SerializeField] SpriteRenderer spriteRenderer;
 	[SerializeField] Sprite[] allSprites;
 
+	[SerializeField] float[] weights;
+
+	[SerializeField] float weightDivider = 10;
+
+
 	[SerializeField] ParticleSystem particleSystem;
+
 
 	[HideInInspector] public int targetId;
 
+	int imageId;
 
 	void Start()
 	{
 		do
 		{
-			var rnd = Random.Range(0, allSprites.Length-1);
-			spriteRenderer.sprite = allSprites[rnd];
+			imageId = Random.Range(0, allSprites.Length-1);
+			spriteRenderer.sprite = allSprites[imageId];
 		} while(spriteRenderer.sprite == null);
 
-		var c = spriteRenderer.bounds.center;
-		c.x += spriteRenderer.bounds.size.x / 4;
-		root.transform.position = c;
+		//var c = spriteRenderer.bounds.center;
+		//c.x += spriteRenderer.bounds.size.x / 4;
+		//root.transform.position = c;
 
 	}
 	public void SetTarget(int targetId)
 	{
 		this.targetId = targetId;
-		label.text = targetId.ToString();
+		//label.text = targetId.ToString();
 	}
 
 	public bool pickedUp = false;
@@ -43,14 +50,16 @@ public class TaskToComplete : MonoBehaviour
 	{
 		pickedUp = true;
 		particleSystem.gameObject.SetActive(false);
+		Locator.Get<PlayerMomentumMovement>()._rigidbody.mass += weights[imageId]/weightDivider;
 	}
 
 	public void Drop()
 	{
 		pickedUp = false;
 		var r = this.gameObject.AddComponent<Rigidbody2D>();
-		r.velocity = Locator.Get<PlayerMovement>()._rigidbody.velocity;
+		r.velocity = Locator.Get<PlayerMomentumMovement>()._rigidbody.velocity;
 		r.mass /=2;
+		Locator.Get<PlayerMomentumMovement>()._rigidbody.mass -= weights[imageId]/weightDivider;
 	}
 
 	void Update()
@@ -65,7 +74,7 @@ public class TaskToComplete : MonoBehaviour
 				vel.Normalize();
 				vel /= 2;
 				toPos -= vel;
-				transform.position = Vector3.MoveTowards(transform.position, toPos, 2.8f * Time.deltaTime);
+				transform.position = Vector3.MoveTowards(transform.position, toPos, 3.2f * Time.deltaTime);
 			}
 		}
 	}
