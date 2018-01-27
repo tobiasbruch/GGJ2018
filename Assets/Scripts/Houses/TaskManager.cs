@@ -25,7 +25,7 @@ public class TaskManager : MonoBehaviour
 		{
 			randomId = Random.Range(0, houses.Count);
 		} while(randomId == exclude);
-
+Debug.Log("id: " + randomId + " exc: " + exclude);
 		var task = tasks[randomId];
 		tasks[randomId].gameObject.SetActive(true);
 
