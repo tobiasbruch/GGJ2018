@@ -36,13 +36,16 @@ public class TaskToComplete : MonoBehaviour
 	{
 		if(pickedUp)
 		{
-			var p = Locator.Get<PlayerMovement>();
-			var toPos = p.transform.position;
-			var vel = new Vector3(p._rigidbody.velocity.x, p._rigidbody.velocity.y, 0);
-			vel.Normalize();
-			vel /= 2;
-			toPos -= vel;
-			transform.position = Vector3.MoveTowards(transform.position, toPos, 2.8f * Time.deltaTime);
+			var p = Locator.Get<PlayerMomentumMovement>();
+			if(p != null)
+			{
+				var toPos = p.transform.position;
+				var vel = new Vector3(p._rigidbody.velocity.x, p._rigidbody.velocity.y, 0);
+				vel.Normalize();
+				vel /= 2;
+				toPos -= vel;
+				transform.position = Vector3.MoveTowards(transform.position, toPos, 2.8f * Time.deltaTime);
+			}
 		}
 	}
 }

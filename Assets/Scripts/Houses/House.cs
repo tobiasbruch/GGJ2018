@@ -16,7 +16,7 @@ public class House : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		var player = Locator.Get<PlayerMovement>();
+		var player = Locator.Get<PlayerMomentumMovement>();
 
 		if(player == null) return;
 
