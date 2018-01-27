@@ -73,14 +73,17 @@ public class TaskManager : MonoBehaviour
 
 		var last = activeTasks.LastOrDefault();
 
-		var pos = Camera.main.ViewportToWorldPoint(new Vector3(.05f, 1 - (.02f + activeTasks.Count * .08f), 0));
-		pos.z = 0;
+		var pos = new Vector3();
+
+		if(taskListContainer.transform.childCount > 0)
+			pos.y = taskListContainer.transform.GetChild(taskListContainer.transform.childCount-1)
+				        .transform.position.y -.7f;
 
 		//if(last != null)
 		//	pos.y = last.transform.position.y - 20;
 		task.transform.SetParent(taskListContainer.transform);
 
-		task.transform.DOMove(pos, .5f).SetEase(Ease.InOutSine);
+		task.transform.DOLocalMove(pos, .5f).SetEase(Ease.InOutSine);
 	}
 
 	void Update()
