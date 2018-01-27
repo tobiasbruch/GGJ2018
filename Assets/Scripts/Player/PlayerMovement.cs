@@ -6,27 +6,53 @@ public class PlayerMovement : MonoBehaviour {
 
 	[SerializeField]
 	private float _speed;
+	[SerializeField]
+	private float _flapVelocity;
+	[SerializeField]
+	private float _turnRate;
 
 	private float _xInput;
-	private float _yInput;
+	private float _xVelocity;
+
+	private Rigidbody2D _rigidbody;
 
 	// Use this for initialization
 	void Start () {
-		
+		_rigidbody = GetComponent<Rigidbody2D>();
+		_xVelocity = _speed;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		GetInput();
+		transform.right = _rigidbody.velocity;
+	}
+
+	void FixedUpdate(){
 		ProcessInput();
 	}
 
 	void GetInput(){
+		float newXInput =  Input.GetAxis("Horizontal");
+		if(newXInput != _xInput && newXInput != 0){
+			_xInput = newXInput;
+			float xVel = 0;
+			if(_xInput > 0){
+				xVel = _speed;
+			} else if(_xInput < 0){
+				xVel = -_speed;
+			}
+			_rigidbody.velocity = new Vector2(xVel, _flapVelocity);
+		}
+		/*
 		_xInput = Input.GetAxis("Horizontal");
-		_yInput = Input.GetAxis("Vertical");
+
+		if(!Mathf.Approximately(_xInput, 0)){
+			_xVelocity = Mathf.MoveTowards(_xVelocity, Mathf.Sign(_xInput) * _speed, Time.deltaTime * _turnRate);
+		}*/
 	}
 
 	void ProcessInput(){
-		transform.position += new Vector3(_xInput, _yInput) * _speed * Time.deltaTime;
+		//_rigidbody.velocity = new Vector2(_xVelocity, Input.GetKeyDown(KeyCode.Space) ? _flapVelocity : _rigidbody.velocity.y);
 	}
 }
