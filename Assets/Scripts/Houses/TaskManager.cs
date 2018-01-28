@@ -37,6 +37,8 @@ public class TaskManager : MonoBehaviour
 
 	public TaskToComplete activeTask => activeTasks.Count > 0 ? activeTasks[0] : null;
 
+	public int pickedUpTasks = 0;
+
 	private AudioSource _audioSource;
 	public void Init()
 	{
@@ -135,6 +137,13 @@ public class TaskManager : MonoBehaviour
 		task.transform.localScale *= .6f;
 		task.PickedUp();
 
+		var otherHouse = houses.Find(t => t.id == task.targetId);
+
+		if(pickedUpTasks == 0)
+			otherHouse.LightUp();
+
+		pickedUpTasks++;
+
 		_audioSource.PlayOneShot(_pickUpLetterClips[Random.Range(0, _pickUpLetterClips.Length)]);
 	}
 
@@ -157,8 +166,14 @@ public class TaskManager : MonoBehaviour
 			{
 				Destroy(taskToComplete);
 				droppedTasks.RemoveAt(i);
+				ResetParticles();
 			}
 		}
+	}
+
+	void ResetParticles()
+	{
+		houses.ForEach(t => t.ResetParticle());
 	}
 
 	public void CompleteTask(TaskToComplete task)
@@ -177,5 +192,6 @@ public class TaskManager : MonoBehaviour
 		Locator.Get<Resources>().AddCoins(task.coinsReward);
 		droppedTasks.Remove(task);
 		Destroy(task.gameObject);
+		ResetParticles();
 	}
 }
