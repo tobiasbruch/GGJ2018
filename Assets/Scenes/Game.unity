@@ -5383,14 +5383,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950dcbe1fce5c4fbf852476d876fe741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 60
-  addedTimePerDelivering: 8
+  startTime: 50
+  addedTimePerDelivering: 9
   _gameOverScreen: {fileID: 1409261280279792, guid: 3ce43c9858e36cc41966d2461bb0f93b,
     type: 2}
   _uiCanvas: {fileID: 1859321596}
   intro: {fileID: 1356966610}
-  _music: {fileID: 0}
-  _flapping: {fileID: 0}
+  _music: {fileID: 1424811964}
+  _flapping: {fileID: 2104599519}
   backgroundImage: {fileID: 467763004}
 --- !u!1 &1731492659
 GameObject:
@@ -5658,3 +5658,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cb979a57e754e4499d5ece84e95f7e5, type: 2}
   m_IsPrefabParent: 0
+--- !u!82 &2104599519 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82717345215199144, guid: 5cb979a57e754e4499d5ece84e95f7e5,
+    type: 2}
+  m_PrefabInternal: {fileID: 2104599518}
