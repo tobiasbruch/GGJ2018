@@ -1097,6 +1097,8 @@ MonoBehaviour:
   hate: 0
   _receiveSpeechBubble:
   - {fileID: 1375171987838306, guid: f339492e5b98a564b8774b034cecd811, type: 2}
+  - {fileID: 1110242093722906, guid: 48638ee9f53549f4d97e1d33bfad3eb2, type: 2}
+  - {fileID: 1611586975049052, guid: cddb545df735d1a4aa4399d2749c128a, type: 2}
   _requestSpeechBubblePrefab: {fileID: 1214298334329356, guid: 75f8e3055c7b184469f8860e80768f95,
     type: 2}
   _requestSpeechBubbles:
@@ -1164,7 +1166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f36ff06226f73a544a845ebf2371d23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _arrowPrefab: {fileID: 1272328866166506, guid: 51068c2f81f5c1b489dc8e4380fa43a7,
+  _arrowPrefab: {fileID: 1446422162105302, guid: c0397a7967ceec740911f4f626db9d3e,
     type: 2}
   _windUpPrefab: {fileID: 1196411746461446, guid: a3607a78d4008854d8a8cca78527c16c,
     type: 2}
@@ -1219,7 +1221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f36ff06226f73a544a845ebf2371d23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _arrowPrefab: {fileID: 1272328866166506, guid: 51068c2f81f5c1b489dc8e4380fa43a7,
+  _arrowPrefab: {fileID: 1416047002571886, guid: 111d32793f6195b4ea3d93883bc6dd9b,
     type: 2}
   _windUpPrefab: {fileID: 1196411746461446, guid: a3607a78d4008854d8a8cca78527c16c,
     type: 2}
@@ -1240,7 +1242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f36ff06226f73a544a845ebf2371d23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _arrowPrefab: {fileID: 1272328866166506, guid: 51068c2f81f5c1b489dc8e4380fa43a7,
+  _arrowPrefab: {fileID: 1808883928553666, guid: a3ce292d067c7ab4a9774d5ab54cfcdb,
     type: 2}
   _windUpPrefab: {fileID: 1196411746461446, guid: a3607a78d4008854d8a8cca78527c16c,
     type: 2}
@@ -1287,7 +1289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f36ff06226f73a544a845ebf2371d23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _arrowPrefab: {fileID: 1272328866166506, guid: 51068c2f81f5c1b489dc8e4380fa43a7,
+  _arrowPrefab: {fileID: 1083848594043480, guid: 1194e47fed5456043ad197c102254d30,
     type: 2}
   _windUpPrefab: {fileID: 1196411746461446, guid: a3607a78d4008854d8a8cca78527c16c,
     type: 2}
