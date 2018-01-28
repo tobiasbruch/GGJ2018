@@ -66,12 +66,12 @@ public class Intro : MonoBehaviour {
 
 		yield return new WaitForSeconds(.7f);
 
-		Locator.Get<PlayerMomentumMovement>().gameObject.SetActive(true);
-
-		Locator.Get<PlayerMomentumMovement>().transform.DOPunchScale(Vector3.one * 1.1f, .5f, 1, 1);
-		Instantiate(birdAppear, transform.position, Quaternion.identity);
-
-
+		var p = Locator.Get<PlayerMomentumMovement>();
+		p.gameObject.SetActive(true);
+		p.transform.DOPunchScale(Vector3.one * 1.1f, .5f, 1);
+		var pos = p.transform.position;
+		pos.y += 1f;
+		Instantiate(birdAppear, pos, Quaternion.identity);
 
 		yield return new WaitForSeconds(2);
 		Locator.Get<TaskManager>().Init();

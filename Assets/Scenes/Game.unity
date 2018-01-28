@@ -4585,6 +4585,7 @@ MonoBehaviour:
   _musicSource: {fileID: 1424811964}
   _transition: {fileID: 8300000, guid: 7a38cda5c4614a240afdacc567dbfe81, type: 3}
   _mainTheme: {fileID: 8300000, guid: d682691580a40db49b9dbb50d7a1509d, type: 3}
+  birdAppear: {fileID: 1851232002126072, guid: d238cfee49a2c4543a6b135c7de39550, type: 2}
 --- !u!114 &1356966613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4712,7 +4713,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1388262561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.41, y: 3.1934, z: -10}
+  m_LocalPosition: {x: -0.4333334, y: 4.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 784879293}
@@ -5207,7 +5208,6 @@ MonoBehaviour:
     type: 2}
   _uiCanvas: {fileID: 1859321596}
   intro: {fileID: 1356966610}
-  birdAppear: {fileID: 1851232002126072, guid: d238cfee49a2c4543a6b135c7de39550, type: 2}
   backgroundImage: {fileID: 467763004}
 --- !u!1 &1731492659
 GameObject:
