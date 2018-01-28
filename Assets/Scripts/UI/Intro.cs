@@ -9,6 +9,8 @@ public class Intro : MonoBehaviour {
 	[SerializeField] Image image;
 	[SerializeField] Button button;
 	[SerializeField] AudioSource _musicSource;
+
+	[SerializeField] AudioSource _birdCry;
 	[SerializeField] AudioClip _transition;
 	[SerializeField] AudioClip _mainTheme;
 
@@ -85,6 +87,7 @@ public class Intro : MonoBehaviour {
 		_musicSource.Play();
 		yield return new WaitForSeconds(_transition.length);*/
 		yield return null;
+		//_birdCry.Play();
 		_musicSource.Stop();
 		_musicSource.clip = _mainTheme;
 		_musicSource.Play();
