@@ -11,9 +11,9 @@ public class House : MonoBehaviour
 
 	public int id => int.Parse(name.Substring(name.Length-1));
 
-	public float loveMeter;
-
 	public TaskToComplete availableTask {get; private set;}
+
+	bool littenUp = false;
 
 	// Update is called once per frame
 	void Update ()
@@ -42,9 +42,14 @@ public class House : MonoBehaviour
 		}
 	}
 
-	public void ResetParticle()
+	public void ResetLightUp()
 	{
-		particleSystem.gameObject.SetActive(false);
+		if(littenUp)
+		{
+			littenUp = false;
+			particleSystem.gameObject.SetActive(false);
+			GetComponent<Animation>().Stop();
+		}
 	}
 
 	public void GiveTask(TaskToComplete task)
@@ -59,6 +64,7 @@ public class House : MonoBehaviour
 
 	IEnumerator DoLightUp()
 	{
+		littenUp = true;
 		GetComponent<Animation>().Play("HouseSqueezeLoop");
 		particleSystem.gameObject.SetActive(true);
 

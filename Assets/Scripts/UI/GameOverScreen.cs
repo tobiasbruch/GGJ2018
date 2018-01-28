@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour {
 
-	public void Retry(){
+	public void Retry()
+	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 }

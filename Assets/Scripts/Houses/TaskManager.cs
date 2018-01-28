@@ -39,6 +39,8 @@ public class TaskManager : MonoBehaviour
 
 	public int pickedUpTasks = 0;
 
+	public int completedCount = 0;
+
 	private AudioSource _audioSource;
 	public void Init()
 	{
@@ -139,10 +141,9 @@ public class TaskManager : MonoBehaviour
 
 		var otherHouse = houses.Find(t => t.id == task.targetId);
 
-		if(pickedUpTasks == 0)
+		if(completedCount == 0)
 			otherHouse.LightUp();
 
-		pickedUpTasks++;
 
 		_audioSource.PlayOneShot(_pickUpLetterClips[Random.Range(0, _pickUpLetterClips.Length)]);
 	}
@@ -173,11 +174,13 @@ public class TaskManager : MonoBehaviour
 
 	void ResetParticles()
 	{
-		houses.ForEach(t => t.ResetParticle());
+		houses.ForEach(t => t.ResetLightUp());
 	}
+
 
 	public void CompleteTask(TaskToComplete task)
 	{
+		completedCount++;
 		House targetHouse = null;
 		foreach(var house in houses){
 			if(house.id == task.targetId){
@@ -193,5 +196,6 @@ public class TaskManager : MonoBehaviour
 		droppedTasks.Remove(task);
 		Destroy(task.gameObject);
 		ResetParticles();
+		Locator.Get<Game>().AddTime();
 	}
 }
