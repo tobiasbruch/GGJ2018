@@ -1316,7 +1316,7 @@ MonoBehaviour:
   - {fileID: 114809419855444196, guid: a17a558c417a74e0b96923697db01f01, type: 2}
   activeTasks: []
   droppedTasks: []
-  completedTaskCount: 0
+  pickedUpTasks: 0
 --- !u!114 &114505481101789682
 MonoBehaviour:
   m_ObjectHideFlags: 1
