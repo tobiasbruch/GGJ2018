@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,12 +20,15 @@ public class Game : MonoBehaviour {
 	[SerializeField]
 	private GameObject intro;
 
+	float endTime;
+
 	[SerializeField] SpriteRenderer backgroundImage;
 
 	bool playing = true;
 
 	void Start()
 	{
+		endTime = startTime/3;
 		intro.gameObject.SetActive(true);
 		currentTime = startTime;
 	}
@@ -59,7 +63,12 @@ public class Game : MonoBehaviour {
 			backgroundImage.color = color;
 		}
 
-		if(currentTime < startTime/3)
+		float actualTimeLeft = currentTime - endTime;
+
+		Locator.Get<Timer>().SetSeconds(actualTimeLeft);
+
+
+		if(currentTime < endTime)
 		{
 			GameOver();
 			playing = false;
