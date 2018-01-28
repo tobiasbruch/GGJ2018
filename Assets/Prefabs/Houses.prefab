@@ -91,6 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4953883033799328}
   - component: {fileID: 114330719589683508}
+  - component: {fileID: 82296109763135398}
   m_Layer: 0
   m_Name: Houses
   m_TagString: Untagged
@@ -796,6 +797,86 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.84, y: 2.36}
   m_EdgeRadius: 0
+--- !u!82 &82296109763135398
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1177112144729136}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!111 &111213728454476920
 Animation:
   m_ObjectHideFlags: 1
@@ -1014,6 +1095,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hate: 0
+  _receiveSpeechBubble:
+  - {fileID: 1375171987838306, guid: f339492e5b98a564b8774b034cecd811, type: 2}
   _requestSpeechBubblePrefab: {fileID: 1214298334329356, guid: 75f8e3055c7b184469f8860e80768f95,
     type: 2}
   _requestSpeechBubbles:
@@ -1058,6 +1141,8 @@ MonoBehaviour:
   dontCreateTaskAtDistanceToHouse: 2
   hateIncrement: 0.3
   taskListContainer: {fileID: 0}
+  _pickUpLetterClips:
+  - {fileID: 8300000, guid: df721b43ba97bd74e9cac445e6538ff5, type: 3}
   houses:
   - {fileID: 114710471638001650}
   - {fileID: 114554683149024472}

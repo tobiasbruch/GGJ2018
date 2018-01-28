@@ -25,6 +25,8 @@ public class TaskManager : MonoBehaviour
 
 	[SerializeField] GameObject taskListContainer;
 
+	[SerializeField] private AudioClip[] _pickUpLetterClips;
+
 	public List<House> houses;
 
 	public List<TaskToComplete> tasks;
@@ -35,6 +37,7 @@ public class TaskManager : MonoBehaviour
 
 	public TaskToComplete activeTask => activeTasks.Count > 0 ? activeTasks[0] : null;
 
+	private AudioSource _audioSource;
 	public void Init()
 	{
 		foreach (var taskToComplete in tasks)
@@ -43,6 +46,10 @@ public class TaskManager : MonoBehaviour
 		}
 
 		StartCoroutine(CreateTasks());
+	}
+
+	void Start(){
+		_audioSource = GetComponent<AudioSource>();
 	}
 
 	IEnumerator CreateTasks()
@@ -128,7 +135,7 @@ public class TaskManager : MonoBehaviour
 		task.transform.localScale *= .6f;
 		task.PickedUp();
 
-
+		_audioSource.PlayOneShot(_pickUpLetterClips[Random.Range(0, _pickUpLetterClips.Length)]);
 	}
 
 	public void Drop()
