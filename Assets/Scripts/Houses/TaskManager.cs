@@ -13,6 +13,7 @@ public class TaskManager : MonoBehaviour
 	}
 	public float hate;
 
+	[SerializeField] GameObject[] _receiveSpeechBubble;
 	[SerializeField] GameObject _requestSpeechBubblePrefab;
 	[SerializeField] RequestSpeechBubbles[] _requestSpeechBubbles;
 	[SerializeField] private float[] _hateThresholds;
@@ -155,6 +156,16 @@ public class TaskManager : MonoBehaviour
 
 	public void CompleteTask(TaskToComplete task)
 	{
+		House targetHouse = null;
+		foreach(var house in houses){
+			if(house.id == task.targetId){
+				targetHouse = house;
+				break;
+			}
+		}
+		if(targetHouse){
+			Instantiate(_receiveSpeechBubble[Random.Range(0, _receiveSpeechBubble.Length)], targetHouse.transform.position + Vector3.up, Quaternion.identity);
+		}
 		hate += hateIncrement;
 		Locator.Get<Resources>().AddCoins(task.coinsReward);
 		droppedTasks.Remove(task);
