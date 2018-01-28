@@ -20,11 +20,6 @@ public class Game : MonoBehaviour {
 	[SerializeField]
 	private GameObject intro;
 
-	[SerializeField]
-	private AudioSource _music;
-	[SerializeField]
-	private AudioSource _flapping;
-
 	float endTime;
 
 	[SerializeField] SpriteRenderer backgroundImage;
@@ -40,8 +35,6 @@ public class Game : MonoBehaviour {
 	public void GameOver()
 	{
 		Instantiate(_gameOverScreen, _uiCanvas.transform, false);
-		_music.Stop();
-		_flapping.Stop();
 	}
 
 	public void AddTime()
@@ -75,7 +68,7 @@ public class Game : MonoBehaviour {
 		Locator.Get<Timer>().SetSeconds(actualTimeLeft);
 
 
-		if(currentTime < endTime)
+		if(currentTime < endTime && playing)
 		{
 			GameOver();
 			playing = false;
