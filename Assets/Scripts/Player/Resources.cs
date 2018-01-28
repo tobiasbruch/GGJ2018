@@ -8,7 +8,7 @@ public class Resources : MonoBehaviour
 {
 	[SerializeField] TextMeshProUGUI label;
 
-	double coins = 0;
+	public double coins = 0;
 
 	void Start()
 	{

@@ -5201,10 +5201,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950dcbe1fce5c4fbf852476d876fe741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startTime: 45
+  addedTimePerDelivering: 9
   _gameOverScreen: {fileID: 1409261280279792, guid: 3ce43c9858e36cc41966d2461bb0f93b,
     type: 2}
   _uiCanvas: {fileID: 1859321596}
   intro: {fileID: 1356966610}
+  backgroundImage: {fileID: 467763004}
 --- !u!1 &1731492659
 GameObject:
   m_ObjectHideFlags: 0
