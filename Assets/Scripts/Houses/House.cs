@@ -5,6 +5,7 @@ using UnityEngine;
 public class House : MonoBehaviour
 {
 	[SerializeField] ShootArrows shootArrows;
+	[SerializeField] GameObject particleSystem;
 
 	const float completeAtDistance = 1.3f;
 
@@ -41,9 +42,26 @@ public class House : MonoBehaviour
 		}
 	}
 
+	public void ResetParticle()
+	{
+		particleSystem.gameObject.SetActive(false);
+	}
 
 	public void GiveTask(TaskToComplete task)
 	{
 		this.availableTask = task;
+	}
+
+	public void LightUp()
+	{
+		StartCoroutine(DoLightUp());
+	}
+
+	IEnumerator DoLightUp()
+	{
+		GetComponent<Animation>().Play("HouseSqueezeLoop");
+		particleSystem.gameObject.SetActive(true);
+
+		yield return new WaitForSeconds(GetComponent<Animation>()["HouseSqueeze"].time * 3);
 	}
 }
