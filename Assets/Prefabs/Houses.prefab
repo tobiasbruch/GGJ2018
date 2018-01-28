@@ -1302,7 +1302,7 @@ MonoBehaviour:
   taskFrequencySecondsMax: 8
   maskTasks: 2
   dontCreateTaskAtDistanceToHouse: 2
-  hateIncrement: 0.3
+  hateIncrement: 0.2
   taskListContainer: {fileID: 0}
   _pickUpLetterClips:
   - {fileID: 8300000, guid: df721b43ba97bd74e9cac445e6538ff5, type: 3}
@@ -1332,8 +1332,8 @@ MonoBehaviour:
     type: 2}
   _windUpPrefab: {fileID: 1196411746461446, guid: a3607a78d4008854d8a8cca78527c16c,
     type: 2}
-  _shootingMinFrequency: 1
-  _shootingMaxFrequency: 2
+  _shootingMinFrequency: 1.5
+  _shootingMaxFrequency: 4
   _aimSpread: 1
   _minDistance: 2
   _windUpDuration: 1.3333
@@ -1353,8 +1353,8 @@ MonoBehaviour:
     type: 2}
   _windUpPrefab: {fileID: 1196411746461446, guid: a3607a78d4008854d8a8cca78527c16c,
     type: 2}
-  _shootingMinFrequency: 1
-  _shootingMaxFrequency: 2
+  _shootingMinFrequency: 1.5
+  _shootingMaxFrequency: 4
   _aimSpread: 1
   _minDistance: 2
   _windUpDuration: 1.3333
@@ -1388,8 +1388,8 @@ MonoBehaviour:
     type: 2}
   _windUpPrefab: {fileID: 1196411746461446, guid: a3607a78d4008854d8a8cca78527c16c,
     type: 2}
-  _shootingMinFrequency: 1
-  _shootingMaxFrequency: 2
+  _shootingMinFrequency: 1.5
+  _shootingMaxFrequency: 4
   _aimSpread: 1
   _minDistance: 2
   _windUpDuration: 1.3333
@@ -1409,8 +1409,8 @@ MonoBehaviour:
     type: 2}
   _windUpPrefab: {fileID: 1196411746461446, guid: a3607a78d4008854d8a8cca78527c16c,
     type: 2}
-  _shootingMinFrequency: 1
-  _shootingMaxFrequency: 2
+  _shootingMinFrequency: 1.5
+  _shootingMaxFrequency: 4
   _aimSpread: 1
   _minDistance: 2
   _windUpDuration: 1.3333
@@ -1458,8 +1458,8 @@ MonoBehaviour:
     type: 2}
   _windUpPrefab: {fileID: 1196411746461446, guid: a3607a78d4008854d8a8cca78527c16c,
     type: 2}
-  _shootingMinFrequency: 1
-  _shootingMaxFrequency: 2
+  _shootingMinFrequency: 1.5
+  _shootingMaxFrequency: 4
   _aimSpread: 1
   _minDistance: 2
   _windUpDuration: 1.3333

@@ -8,7 +8,9 @@ public class Intro : MonoBehaviour {
 
 	[SerializeField] Image image;
 	[SerializeField] Button button;
-
+	[SerializeField] AudioSource _musicSource;
+	[SerializeField] AudioClip _transition;
+	[SerializeField] AudioClip _mainTheme;
 	List<Vector3> housePositions = new List<Vector3>();
 
 	bool started = false;
@@ -32,14 +34,16 @@ public class Intro : MonoBehaviour {
 
 	public void Update()
 	{
-		if(Input.anyKeyDown)
+		if(Input.anyKeyDown && !started)
 		{
 			StartCoroutine(DoFadeOut());
+			StartCoroutine(ChangeToMainTheme());
 		}
 	}
 
 	IEnumerator DoFadeOut()
 	{
+		
 		if(started) yield break;
 		started = true;
 		image.DOFade(0, .5f);
@@ -66,6 +70,16 @@ public class Intro : MonoBehaviour {
 		Locator.Get<TaskManager>().Init();
 
 		Destroy(gameObject);
+	}
+
+	IEnumerator ChangeToMainTheme(){
+		_musicSource.Stop();
+		_musicSource.clip = _transition;
+		_musicSource.Play();
+		yield return new WaitForSeconds(_transition.length);
+		_musicSource.Stop();
+		_musicSource.clip = _mainTheme;
+		_musicSource.Play();
 	}
 
 	IEnumerator DoScale(Transform t)

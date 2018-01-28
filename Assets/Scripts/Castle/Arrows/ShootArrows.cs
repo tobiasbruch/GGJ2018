@@ -21,13 +21,17 @@ public class ShootArrows : MonoBehaviour {
 	[SerializeField]
 	private float _shotAnimationPoint = .75f;
 
+	private Coroutine _coroutine;
 	private bool _isInRange;
 	private Transform _target;
 
 	void OnTriggerEnter2D(Collider2D collider){
 		if(collider.GetComponent<PlayerMovement>()){
 			_isInRange = true;
-			StartCoroutine(RepeatShoot());
+			if(_coroutine != null){
+				StopCoroutine(_coroutine);
+			}
+			_coroutine = StartCoroutine(RepeatShoot());
 		}
 	}
 

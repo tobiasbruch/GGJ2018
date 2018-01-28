@@ -6,6 +6,8 @@ public class Arrow : MonoBehaviour {
 	
 	[SerializeField]
 	private float _startingForce;
+	[SerializeField]
+	private AudioClip _hitClip;
 
 	private Rigidbody2D _rigidbody;
 	
@@ -21,6 +23,10 @@ public class Arrow : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision){
+		AudioSource otherSource = collision.gameObject.GetComponentInChildren<AudioSource>();
+		if(otherSource){
+			otherSource.PlayOneShot(_hitClip, 2f);
+		}
 		Destroy(gameObject);
 	}
 }

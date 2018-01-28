@@ -34,6 +34,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1731100089032684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4204941516721020}
+  - component: {fileID: 82739110637347204}
+  m_Layer: 0
+  m_Name: WingAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1906182839039178
 GameObject:
   m_ObjectHideFlags: 0
@@ -50,22 +66,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1977904148423282
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4717262640077620}
-  - component: {fileID: 82845563537215490}
-  m_Layer: 0
-  m_Name: WingAudioSource
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &4135519496525898
 Transform:
   m_ObjectHideFlags: 1
@@ -73,13 +73,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1670288312523560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.41, y: 1.99, z: 0}
+  m_LocalPosition: {x: -7.41, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4595212080561180}
-  - {fileID: 4717262640077620}
+  - {fileID: 4204941516721020}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4204941516721020
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1731100089032684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4135519496525898}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4595212080561180
 Transform:
@@ -94,19 +107,6 @@ Transform:
   m_Father: {fileID: 4135519496525898}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!4 &4717262640077620
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1977904148423282}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4135519496525898}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50430384651440948
 Rigidbody2D:
   serializedVersion: 4
@@ -152,12 +152,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23, y: 0.58}
   m_EdgeRadius: 0
---- !u!82 &82845563537215490
+--- !u!82 &82739110637347204
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1977904148423282}
+  m_GameObject: {fileID: 1731100089032684}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -288,6 +288,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ab2aa93c9e0c1469f212a41d98cabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitAudioSource: {fileID: 0}
+  _hitClips:
+  - {fileID: 8300000, guid: 177d60715b44a0c4cafeba775f5f00dc, type: 3}
 --- !u!114 &114761741315437204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -302,7 +305,7 @@ MonoBehaviour:
   _wingFlapping:
   - {fileID: 8300000, guid: 9053df6ef5a005c47aeedc1af7bcb950, type: 3}
   - {fileID: 8300000, guid: 5088ee2fe49f47842a6f199ac454d834, type: 3}
-  _wingFlappingAudioSource: {fileID: 82845563537215490}
+  _wingFlappingAudioSource: {fileID: 82739110637347204}
 --- !u!114 &114854160160405508
 MonoBehaviour:
   m_ObjectHideFlags: 1
