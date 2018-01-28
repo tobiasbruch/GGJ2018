@@ -47,7 +47,7 @@ public class Game : MonoBehaviour {
 	void Update()
 	{
 		difficulty += Time.deltaTime/100; // after 100 seconds, twice as hard
-		if(!playing) return;
+		if(!Locator.Get<Timer>().countdownDone) return;
 		if(Locator.Get<TaskManager>().completedCount > 0)
 		{
 			currentTime -= (Time.deltaTime * difficulty);

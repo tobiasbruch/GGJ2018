@@ -180,6 +180,11 @@ public class TaskManager : MonoBehaviour
 
 	public void CompleteTask(TaskToComplete task)
 	{
+		if(completedCount == 0)
+		{
+			Locator.Get<Timer>().Countdown();
+		}
+
 		completedCount++;
 		House targetHouse = null;
 		foreach(var house in houses){

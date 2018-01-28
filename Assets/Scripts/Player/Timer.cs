@@ -8,11 +8,15 @@ using UnityEngine;
 public class Timer : MonoBehaviour {
 
 	[SerializeField] TextMeshProUGUI label;
+	[SerializeField] TextMeshProUGUI countdown;
 
+
+	public bool countdownDone = false;
 
 	// Use this for initialization
 	void Start () {
-
+		label.gameObject.SetActive(false);
+		countdown.text = "";
 	}
 
 	// Update is called once per frame
@@ -20,11 +24,38 @@ public class Timer : MonoBehaviour {
 
 	}
 
+
+	public void Countdown()
+	{
+		StartCoroutine(DoCountdown());
+	}
+
+	IEnumerator DoCountdown()
+	{
+		yield return new WaitForSeconds(1);
+		countdown.text = "3";
+		countdown.transform.DOPunchScale(Vector3.one * 1.2f, 1f, 1, .1f);
+		yield return new WaitForSeconds(1);
+		countdown.text = "2";
+		countdown.transform.DOPunchScale(Vector3.one * 1.2f, 1f, 1, .1f);
+		yield return new WaitForSeconds(1);
+		countdown.text = "1";
+		countdown.transform.DOPunchScale(Vector3.one * 1.2f, 1f, 1, .1f);
+		yield return new WaitForSeconds(1);
+		countdown.text = "Go!";
+		countdown.transform.DOPunchScale(Vector3.one * 1.2f, 1f, 1, .1f);
+		label.gameObject.SetActive(true);
+		label.transform.DOPunchScale(Vector3.one * 1.2f, .5f, 1, .1f);
+		yield return new WaitForSeconds(1);
+		countdown.text = "";
+		countdownDone = true;
+	}
+
 	public void Bounce()
 	{
-		transform.DOKill();
-		transform.DOPunchScale(Vector3.one * 1.2f, .5f, 1, .1f);
-		transform.localScale = Vector3.one;
+		label.transform.DOKill();
+		label.transform.DOPunchScale(Vector3.one * 1.2f, .5f, 1, .1f);
+		label.transform.localScale = Vector3.one;
 	}
 
 	public void SetSeconds(float seconds)
