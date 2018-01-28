@@ -46,15 +46,20 @@ public class ShootArrows : MonoBehaviour {
 	}
 
 	IEnumerator RepeatShoot(){
-		while(_isInRange && Vector3.Distance(Locator.Get<PlayerMovement>().transform.position, this.transform.position) > _minDistance){
+		while(true){
+			bool shoot = _isInRange && Vector3.Distance(Locator.Get<PlayerMovement>().transform.position, this.transform.position) > _minDistance;
+			
 			float totalWaitTime = (Random.Range(_shootingMinFrequency / Locator.Get<TaskManager>().hate, _shootingMaxFrequency / Locator.Get<TaskManager>().hate));
 			yield return new WaitForSeconds(totalWaitTime -_windUpDuration * _shotAnimationPoint);
-			WindupShot shot = Instantiate(_windUpPrefab,transform, false).GetComponent<WindupShot>();
-			shot._target = Locator.Get<PlayerMomentumMovement>().transform;
-			shot.KillIn(_windUpDuration);
-			yield return new WaitForSeconds(_windUpDuration * _shotAnimationPoint);
+			
+			if(shoot){
+				WindupShot shot = Instantiate(_windUpPrefab,transform, false).GetComponent<WindupShot>();
+				shot._target = Locator.Get<PlayerMomentumMovement>().transform;
+				shot.KillIn(_windUpDuration);
+				yield return new WaitForSeconds(_windUpDuration * _shotAnimationPoint);
 
-			Shoot();
+				Shoot();
+			}
 		}
 	}
 

@@ -44,6 +44,10 @@ public class House : MonoBehaviour
 		}
 	}
 
+	public void PlaySqueezeSound(){
+		GetComponent<AudioSource>().Play();
+	}
+
 	public void ResetLightUp()
 	{
 		if(littenUp)
