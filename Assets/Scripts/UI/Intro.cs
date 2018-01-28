@@ -11,6 +11,7 @@ public class Intro : MonoBehaviour {
 
 	List<Vector3> housePositions = new List<Vector3>();
 
+	bool started = false;
 	// Use this for initialization
 	void Start ()
 	{
@@ -29,8 +30,18 @@ public class Intro : MonoBehaviour {
 		});
 	}
 
+	public void Update()
+	{
+		if(Input.anyKeyDown)
+		{
+			StartCoroutine(DoFadeOut());
+		}
+	}
+
 	IEnumerator DoFadeOut()
 	{
+		if(started) yield break;
+		started = true;
 		image.DOFade(0, .5f);
 		yield return new WaitForSeconds(.5f);
 
@@ -47,9 +58,10 @@ public class Intro : MonoBehaviour {
 
 		yield return new WaitForSeconds(.7f);
 
-		Locator.Get<TaskManager>().Init();
-
 		Locator.Get<PlayerMomentumMovement>().gameObject.SetActive(true);
+
+		yield return new WaitForSeconds(2);
+		Locator.Get<TaskManager>().Init();
 
 		Destroy(gameObject);
 	}
