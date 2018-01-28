@@ -31,7 +31,6 @@ public class Game : MonoBehaviour {
 	public void GameOver()
 	{
 		Instantiate(_gameOverScreen, _uiCanvas.transform, false);
-		Locator.Clear();
 	}
 
 	public void AddTime()

@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 774ceeb1d60b74231be929863bf27e38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsReward: 0.1
+  coinsReward: 0.03
   hate: 0
   label: {fileID: 0}
   root: {fileID: 0}
@@ -216,6 +216,7 @@ MonoBehaviour:
   - 2
   - 0.5
   - 1.5
+  weightDivider: 10
   particleSystem: {fileID: 198641511096391822}
   targetId: 0
   pickedUp: 0

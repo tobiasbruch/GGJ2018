@@ -12,7 +12,6 @@ public class Intro : MonoBehaviour {
 	[SerializeField] AudioClip _transition;
 	[SerializeField] AudioClip _mainTheme;
 
-
 	[SerializeField]
 	private GameObject birdAppear;
 	List<Vector3> housePositions = new List<Vector3>();
@@ -21,6 +20,7 @@ public class Intro : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		Locator.Get<PlayerMomentumMovement>().spriteRenderer.gameObject.SetActive(false);
 		var houses = Locator.Get<TaskManager>().houses;
 		foreach (var house in houses)
 			housePositions.Add(house.transform.position);
@@ -65,7 +65,8 @@ public class Intro : MonoBehaviour {
 		yield return new WaitForSeconds(.7f);
 
 		var p = Locator.Get<PlayerMomentumMovement>();
-		p.gameObject.SetActive(true);
+		p.spriteRenderer.gameObject.SetActive(true);
+
 		p.transform.DOPunchScale(Vector3.one * 1.1f, .5f, 1);
 		var pos = p.transform.position;
 		pos.y += 1f;

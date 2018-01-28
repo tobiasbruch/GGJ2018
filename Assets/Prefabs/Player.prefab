@@ -373,6 +373,7 @@ MonoBehaviour:
   _force: 6
   _turnRate: 180
   _conversionRate: 0.2
+  spriteRenderer: {fileID: 212184311263405832}
   _rigidbody: {fileID: 50430384651440948}
 --- !u!114 &114531358317089600
 MonoBehaviour:

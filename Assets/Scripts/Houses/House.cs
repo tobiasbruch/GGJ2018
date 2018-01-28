@@ -6,6 +6,7 @@ public class House : MonoBehaviour
 {
 	[SerializeField] ShootArrows shootArrows;
 	[SerializeField] GameObject particleSystem;
+	[SerializeField] GameObject bitcoin;
 
 	const float completeAtDistance = 1.3f;
 
@@ -39,6 +40,7 @@ public class House : MonoBehaviour
 		{
 			Locator.Get<TaskManager>().CompleteTask(task);
 			GetComponent<Animation>().Play("HouseBounce");
+			Instantiate(bitcoin, transform.position, Quaternion.identity);
 		}
 	}
 

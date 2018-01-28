@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootArrows: {fileID: 114707178882515632}
   particleSystem: {fileID: 1522652794554276}
-  loveMeter: 0
+  bitcoin: {fileID: 1840733107431674, guid: 1957a0c1c8b5f411a939687fd6d880bf, type: 2}
 --- !u!114 &114330719589683508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1317,6 +1317,7 @@ MonoBehaviour:
   activeTasks: []
   droppedTasks: []
   pickedUpTasks: 0
+  completedCount: 0
 --- !u!114 &114505481101789682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1372,7 +1373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootArrows: {fileID: 114515395690994590}
   particleSystem: {fileID: 1631384522305362}
-  loveMeter: 0
+  bitcoin: {fileID: 1840733107431674, guid: 1957a0c1c8b5f411a939687fd6d880bf, type: 2}
 --- !u!114 &114648250969058948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1428,7 +1429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootArrows: {fileID: 114883223675842216}
   particleSystem: {fileID: 1569224139969054}
-  loveMeter: 0
+  bitcoin: {fileID: 1840733107431674, guid: 1957a0c1c8b5f411a939687fd6d880bf, type: 2}
 --- !u!114 &114741818401712918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1442,7 +1443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootArrows: {fileID: 114648250969058948}
   particleSystem: {fileID: 1641448416539140}
-  loveMeter: 0
+  bitcoin: {fileID: 1840733107431674, guid: 1957a0c1c8b5f411a939687fd6d880bf, type: 2}
 --- !u!114 &114883223675842216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1477,7 +1478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootArrows: {fileID: 114505481101789682}
   particleSystem: {fileID: 1681429286253632}
-  loveMeter: 0
+  bitcoin: {fileID: 1840733107431674, guid: 1957a0c1c8b5f411a939687fd6d880bf, type: 2}
 --- !u!198 &198210082498492134
 ParticleSystem:
   m_ObjectHideFlags: 1

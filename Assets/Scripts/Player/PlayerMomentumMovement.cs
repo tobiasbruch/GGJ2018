@@ -17,6 +17,8 @@ public class PlayerMomentumMovement : MonoBehaviour {
 
 	Vector3 startPos;
 
+	public SpriteRenderer spriteRenderer;
+
 	public Rigidbody2D _rigidbody;
 	// Use this for initialization
 	void Start () {
