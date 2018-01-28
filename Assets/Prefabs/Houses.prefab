@@ -1332,8 +1332,8 @@ MonoBehaviour:
     type: 2}
   _windUpPrefab: {fileID: 1196411746461446, guid: a3607a78d4008854d8a8cca78527c16c,
     type: 2}
-  _shootingMinFrequency: 2
-  _shootingMaxFrequency: 3
+  _shootingMinFrequency: 1.5
+  _shootingMaxFrequency: 4
   _aimSpread: 1
   _minDistance: 2
   _windUpDuration: 1.3333
@@ -1353,8 +1353,8 @@ MonoBehaviour:
     type: 2}
   _windUpPrefab: {fileID: 1196411746461446, guid: a3607a78d4008854d8a8cca78527c16c,
     type: 2}
-  _shootingMinFrequency: 2
-  _shootingMaxFrequency: 3
+  _shootingMinFrequency: 1.5
+  _shootingMaxFrequency: 4
   _aimSpread: 1
   _minDistance: 2
   _windUpDuration: 1.3333
@@ -1388,8 +1388,8 @@ MonoBehaviour:
     type: 2}
   _windUpPrefab: {fileID: 1196411746461446, guid: a3607a78d4008854d8a8cca78527c16c,
     type: 2}
-  _shootingMinFrequency: 2
-  _shootingMaxFrequency: 3
+  _shootingMinFrequency: 1.5
+  _shootingMaxFrequency: 4
   _aimSpread: 1
   _minDistance: 2
   _windUpDuration: 1.3333
@@ -1409,8 +1409,8 @@ MonoBehaviour:
     type: 2}
   _windUpPrefab: {fileID: 1196411746461446, guid: a3607a78d4008854d8a8cca78527c16c,
     type: 2}
-  _shootingMinFrequency: 2
-  _shootingMaxFrequency: 3
+  _shootingMinFrequency: 1.5
+  _shootingMaxFrequency: 4
   _aimSpread: 1
   _minDistance: 2
   _windUpDuration: 1.3333
@@ -1458,8 +1458,8 @@ MonoBehaviour:
     type: 2}
   _windUpPrefab: {fileID: 1196411746461446, guid: a3607a78d4008854d8a8cca78527c16c,
     type: 2}
-  _shootingMinFrequency: 2
-  _shootingMaxFrequency: 3
+  _shootingMinFrequency: 1.5
+  _shootingMaxFrequency: 4
   _aimSpread: 1
   _minDistance: 2
   _windUpDuration: 1.3333

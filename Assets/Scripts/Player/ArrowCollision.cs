@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ArrowCollision : MonoBehaviour {
+
 	private Animator _animator;
 
 	void Start(){

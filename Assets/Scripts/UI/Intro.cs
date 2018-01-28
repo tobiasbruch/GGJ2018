@@ -34,7 +34,7 @@ public class Intro : MonoBehaviour {
 
 	public void Update()
 	{
-		if(Input.anyKeyDown)
+		if(Input.anyKeyDown && !started)
 		{
 			StartCoroutine(DoFadeOut());
 			StartCoroutine(ChangeToMainTheme());
