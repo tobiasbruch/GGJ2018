@@ -60,6 +60,8 @@ public class Intro : MonoBehaviour {
 
 		Locator.Get<PlayerMomentumMovement>().gameObject.SetActive(true);
 
+		Locator.Get<PlayerMomentumMovement>().transform.DOPunchScale(Vector3.one * 1.1f, .5f, 1, 1);
+
 		yield return new WaitForSeconds(2);
 		Locator.Get<TaskManager>().Init();
 
