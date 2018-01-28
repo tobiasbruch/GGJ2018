@@ -21,8 +21,6 @@ public class Intro : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		Locator.Get<PlayerMomentumMovement>().gameObject.SetActive(false);
-
 		var houses = Locator.Get<TaskManager>().houses;
 		foreach (var house in houses)
 			housePositions.Add(house.transform.position);
