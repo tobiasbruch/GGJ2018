@@ -30,7 +30,8 @@ public class PlayerMomentumMovement : MonoBehaviour {
 		GetInput();
 		ApplyRotation();
 
-		if(Input.GetKeyDown(KeyCode.Space))
+
+		if(Input.GetKeyDown(KeyCode.Space) || Input.GetAxis("Fire1") > .5f)
 		{
 			Locator.Get<TaskManager>().Drop();
 		}

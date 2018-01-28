@@ -53,7 +53,8 @@ public class PlayerMovement : MonoBehaviour {
 			_rigidbody.velocity = new Vector2(xVel, _flapVelocity);
 		}
 
-		if(Input.GetKeyDown(KeyCode.Space))
+		Debug.Log(Input.GetAxis("Fire1"));
+		if(Input.GetKeyDown(KeyCode.Space) || Input.GetAxis("Fire1") > .5f)
 		{
 			Locator.Get<TaskManager>().Drop();
 		}
