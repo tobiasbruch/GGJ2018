@@ -4712,7 +4712,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1388262561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4333334, y: 4.9, z: -10}
+  m_LocalPosition: {x: -7.41, y: 3.1934, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 784879293}
@@ -4793,7 +4793,7 @@ MonoBehaviour:
 Transform:
   m_PrefabParentObject: {fileID: 4135519496525898, guid: 5cb979a57e754e4499d5ece84e95f7e5,
     type: 2}
-  m_PrefabInternal: {fileID: 2007050656}
+  m_PrefabInternal: {fileID: 2104599518}
 --- !u!1 &1424811963
 GameObject:
   m_ObjectHideFlags: 0
@@ -5201,12 +5201,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950dcbe1fce5c4fbf852476d876fe741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 45
-  addedTimePerDelivering: 9
+  startTime: 50
+  addedTimePerDelivering: 10
   _gameOverScreen: {fileID: 1409261280279792, guid: 3ce43c9858e36cc41966d2461bb0f93b,
     type: 2}
   _uiCanvas: {fileID: 1859321596}
   intro: {fileID: 1356966610}
+  birdAppear: {fileID: 1851232002126072, guid: d238cfee49a2c4543a6b135c7de39550, type: 2}
   backgroundImage: {fileID: 467763004}
 --- !u!1 &1731492659
 GameObject:
@@ -5533,7 +5534,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224802306706656354, guid: 6fc1a91a5a8ea45c8b3beddb0c152229,
     type: 2}
   m_PrefabInternal: {fileID: 1894676287}
---- !u!1001 &2007050656
+--- !u!224 &2019455743 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224003825597921542, guid: 7ed09c9f395db4e6285871d22e4865ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 1598723721}
+--- !u!1001 &2104599518
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -5572,16 +5578,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114598889418420392, guid: 5cb979a57e754e4499d5ece84e95f7e5,
-        type: 2}
-      propertyPath: _hitAudioSource
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cb979a57e754e4499d5ece84e95f7e5, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &2019455743 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224003825597921542, guid: 7ed09c9f395db4e6285871d22e4865ef,
-    type: 2}
-  m_PrefabInternal: {fileID: 1598723721}

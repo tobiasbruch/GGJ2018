@@ -11,6 +11,10 @@ public class Intro : MonoBehaviour {
 	[SerializeField] AudioSource _musicSource;
 	[SerializeField] AudioClip _transition;
 	[SerializeField] AudioClip _mainTheme;
+
+
+	[SerializeField]
+	private GameObject birdAppear;
 	List<Vector3> housePositions = new List<Vector3>();
 
 	bool started = false;
@@ -43,7 +47,7 @@ public class Intro : MonoBehaviour {
 
 	IEnumerator DoFadeOut()
 	{
-		
+
 		if(started) yield break;
 		started = true;
 		image.DOFade(0, .5f);
@@ -65,6 +69,9 @@ public class Intro : MonoBehaviour {
 		Locator.Get<PlayerMomentumMovement>().gameObject.SetActive(true);
 
 		Locator.Get<PlayerMomentumMovement>().transform.DOPunchScale(Vector3.one * 1.1f, .5f, 1, 1);
+		Instantiate(birdAppear, transform.position, Quaternion.identity);
+
+
 
 		yield return new WaitForSeconds(2);
 		Locator.Get<TaskManager>().Init();

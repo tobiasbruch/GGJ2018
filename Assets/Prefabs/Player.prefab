@@ -263,6 +263,7 @@ MonoBehaviour:
   _force: 6
   _turnRate: 180
   _conversionRate: 0.2
+  appearAnim: {fileID: 1851232002126072, guid: d238cfee49a2c4543a6b135c7de39550, type: 2}
   _rigidbody: {fileID: 50430384651440948}
 --- !u!114 &114531358317089600
 MonoBehaviour:
@@ -288,9 +289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ab2aa93c9e0c1469f212a41d98cabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hitAudioSource: {fileID: 0}
-  _hitClips:
-  - {fileID: 8300000, guid: 177d60715b44a0c4cafeba775f5f00dc, type: 3}
 --- !u!114 &114761741315437204
 MonoBehaviour:
   m_ObjectHideFlags: 1

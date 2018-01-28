@@ -23,7 +23,6 @@ public class ShootArrows : MonoBehaviour {
 
 	private Coroutine _coroutine;
 	private bool _isInRange;
-	private Transform _target;
 
 	void OnTriggerEnter2D(Collider2D collider){
 		if(collider.GetComponent<PlayerMovement>()){
@@ -40,10 +39,6 @@ public class ShootArrows : MonoBehaviour {
 			_isInRange = false;
 		}
 	}
-	// Use this for initialization
-	void Start () {
-		_target = Locator.Get<PlayerMomentumMovement>().transform;
-	}
 
 	// Update is called once per frame
 	void Update () {
@@ -55,19 +50,20 @@ public class ShootArrows : MonoBehaviour {
 			float totalWaitTime = (Random.Range(_shootingMinFrequency / Locator.Get<TaskManager>().hate, _shootingMaxFrequency / Locator.Get<TaskManager>().hate));
 			yield return new WaitForSeconds(totalWaitTime -_windUpDuration * _shotAnimationPoint);
 			WindupShot shot = Instantiate(_windUpPrefab,transform, false).GetComponent<WindupShot>();
-			shot._target = _target;
+			shot._target = Locator.Get<PlayerMomentumMovement>().transform;
 			shot.KillIn(_windUpDuration);
 			yield return new WaitForSeconds(_windUpDuration * _shotAnimationPoint);
 
 			Shoot();
 		}
 	}
-	
+
 
 	void Shoot(){
-		if(_target){
-			GameObject instance = Instantiate(_arrowPrefab, transform.position, Quaternion.LookRotation(_target.position - transform.position, Vector3.forward));
-			instance.transform.LookAt(_target.position + new Vector3(0, Random.Range(0f, 1f) * (_target.position - transform.position).magnitude * _aimSpread, 0));
+		var target = Locator.Get<PlayerMomentumMovement>();
+		if(target){
+			GameObject instance = Instantiate(_arrowPrefab, transform.position, Quaternion.LookRotation(target.transform.position - transform.position, Vector3.forward));
+			instance.transform.LookAt(target.transform.position + new Vector3(0, Random.Range(0f, 1f) * (target.transform.position - transform.position).magnitude * _aimSpread, 0));
 		}
 	}
 }

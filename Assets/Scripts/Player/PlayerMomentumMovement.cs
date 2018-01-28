@@ -22,6 +22,7 @@ public class PlayerMomentumMovement : MonoBehaviour {
 	void Start () {
 		_rigidbody = GetComponent<Rigidbody2D>();
 		startPos = transform.position;
+		Show();
 	}
 
 	// Update is called once per frame
@@ -37,6 +38,11 @@ public class PlayerMomentumMovement : MonoBehaviour {
 
 	void FixedUpdate(){
 		ProcessInput();
+	}
+
+	public void Show()
+	{
+
 	}
 
 	void ApplyRotation(){
