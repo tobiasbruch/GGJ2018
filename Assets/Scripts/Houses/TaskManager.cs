@@ -193,6 +193,7 @@ public class TaskManager : MonoBehaviour
 		}
 		hate += hateIncrement;
 		Locator.Get<Resources>().AddCoins(task.coinsReward);
+		Locator.Get<Timer>().Bounce();
 		droppedTasks.Remove(task);
 		Destroy(task.gameObject);
 		ResetParticles();
