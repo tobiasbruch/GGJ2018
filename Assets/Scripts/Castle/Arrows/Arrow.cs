@@ -23,9 +23,9 @@ public class Arrow : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision){
-		AudioSource otherSource = collision.gameObject.GetComponentInChildren<AudioSource>();
-		if(otherSource){
-			otherSource.PlayOneShot(_hitClip, 2f);
+		ArrowCollision arrowCollision = collision.gameObject.GetComponentInChildren<ArrowCollision>();
+		if(arrowCollision){
+			arrowCollision._hitSource.PlayOneShot(_hitClip);
 		}
 		Destroy(gameObject);
 	}

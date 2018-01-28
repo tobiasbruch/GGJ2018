@@ -73,10 +73,11 @@ public class Intro : MonoBehaviour {
 	}
 
 	IEnumerator ChangeToMainTheme(){
-		_musicSource.Stop();
+		/*_musicSource.Stop();
 		_musicSource.clip = _transition;
 		_musicSource.Play();
-		yield return new WaitForSeconds(_transition.length);
+		yield return new WaitForSeconds(_transition.length);*/
+		yield return null;
 		_musicSource.Stop();
 		_musicSource.clip = _mainTheme;
 		_musicSource.Play();
