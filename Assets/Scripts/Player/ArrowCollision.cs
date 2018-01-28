@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ArrowCollision : MonoBehaviour {
 
+	public AudioSource _hitSource;
 	private Animator _animator;
 
 	void Start(){
