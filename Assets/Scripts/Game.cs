@@ -31,6 +31,7 @@ public class Game : MonoBehaviour {
 	public void GameOver()
 	{
 		Instantiate(_gameOverScreen, _uiCanvas.transform, false);
+		Locator.Get<PlayerMomentumMovement>().enabled = false;
 		Locator.Clear();
 	}
 
@@ -56,8 +57,6 @@ public class Game : MonoBehaviour {
 
 
 			var color = new Color(pRed,p,p);
-
-			Debug.Log(currentTime + " " + color);
 
 			backgroundImage.color = color;
 		}
