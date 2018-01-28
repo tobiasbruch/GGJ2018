@@ -76,6 +76,9 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Arrows" t="Include">
+            <e p="WindupShot.cs" t="Include" />
+          </e>
           <e p="Castle" t="Include">
             <e p="Arrows" t="Include">
               <e p="Arrow.cs" t="Include" />
@@ -99,11 +102,13 @@
             <e p="TaskToComplete.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="CinemachineCameraShaker.cs" t="Include" />
             <e p="GameOverScreen.cs" t="Include" />
             <e p="Intro.cs" t="Include" />
             <e p="RequestSpeechBubble.cs" t="Include" />
           </e>
           <e p="Utils" t="Include">
+            <e p="DestroyHelper.cs" t="Include" />
             <e p="Locator.cs" t="Include" />
           </e>
         </e>

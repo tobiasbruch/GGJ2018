@@ -19,7 +19,7 @@ public class PlayerMomentumMovement : MonoBehaviour {
 	void Start () {
 		_rigidbody = GetComponent<Rigidbody2D>();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		GetInput();
@@ -58,8 +58,7 @@ public class PlayerMomentumMovement : MonoBehaviour {
 			_rigidbody.AddForce(transform.right * vel.magnitude * _conversionRate);
 		}
 		Vector3 force = _input.normalized * (1 - Vector2.Dot(transform.right, _input)) * _force;
+
 		_rigidbody.AddForce(force);
-	
-		
 	}
 }

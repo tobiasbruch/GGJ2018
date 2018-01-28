@@ -11,6 +11,7 @@ public class ArrowCollision : MonoBehaviour {
 			var r= collision.gameObject.GetComponent<Rigidbody2D>();
 			this.GetComponent<Rigidbody2D>().AddForce(r.velocity * 1.6f, ForceMode2D.Impulse);
 		//	Locator.Get<Game>().GameOver();
+Locator.Get<CinemachineCameraShaker>().ShakeCamera(.2f);
 		}
 	}
 }

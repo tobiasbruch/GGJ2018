@@ -1214,7 +1214,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1026080201
+  randomSeed: 756105298
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4818,7 +4818,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1388262561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.0333996, z: -10}
+  m_LocalPosition: {x: 0, y: 4.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 784879293}
@@ -4856,6 +4856,45 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Cinemachine.CinemachineBrain+VcamEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &1397216466 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1302471713910424, guid: c94a4a10ad2767e44a6943f08f858c5f,
+    type: 2}
+  m_PrefabInternal: {fileID: 603135876}
+--- !u!114 &1397216470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1397216466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19af67b23d40842c198778015f46a768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdleAmplitude: 0.1
+  IdleFrequency: 1
+  DefaultShakeAmplitude: 0.5
+  DefaultShakeFrequency: 80
+--- !u!1 &1398805492 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1084159985494842, guid: c94a4a10ad2767e44a6943f08f858c5f,
+    type: 2}
+  m_PrefabInternal: {fileID: 603135876}
+--- !u!114 &1398805496
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1398805492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 8608ec81ee27a15488d33f9dad239e91, type: 2}
+  m_AmplitudeGain: 1
+  m_FrequencyGain: 1
 --- !u!4 &1420499974 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4135519496525898, guid: 5cb979a57e754e4499d5ece84e95f7e5,
