@@ -18,6 +18,6 @@ public class GameOverScreen : MonoBehaviour {
 
 	public void Retry()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		SceneManager.LoadScene("Scenes/Empty");
 	}
 }

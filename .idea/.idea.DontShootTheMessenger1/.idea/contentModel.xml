@@ -85,6 +85,7 @@
               <e p="ShootArrows.cs" t="Include" />
             </e>
           </e>
+          <e p="CleanStart.cs" t="Include" />
           <e p="Game.cs" t="Include" />
           <e p="Houses" t="Include">
             <e p="House.cs" t="Include" />
