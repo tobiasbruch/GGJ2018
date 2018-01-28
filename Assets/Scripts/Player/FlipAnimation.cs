@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FlipAnimation : MonoBehaviour {
-
 	[SerializeField]
 	private SpriteRenderer _spriteRenderer;
+	[SerializeField]
+	private Animator _animator;
 
 	// Use this for initialization
 	void Start () {
@@ -23,5 +24,9 @@ public class FlipAnimation : MonoBehaviour {
 		} else {
 			_spriteRenderer.flipY = false;
 		}
+
+		float angleToFlip = Mathf.Min(Mathf.Abs(180 - transform.eulerAngles.z), Mathf.Abs(0 - transform.eulerAngles.z));
+
+		_animator.SetFloat("angleToFlip", angleToFlip);
 	}
 }
